@@ -1,0 +1,352 @@
+.lof-slidecontent, .lof-slidecontent a {
+	color:#FFF;	
+}
+.lof-slidecontent a.readmore{
+	color:#58B1EA;
+	font-size:95%;
+	
+}
+.lof-slidecontent{
+	/*border:#F4F4F4 solid 1px;*/
+}
+.lof-slidecontent .preload{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100000;
+	text-align:center;
+	background:#FFF
+}
+.lof-slidecontent .preload div{
+	height:100%;
+	width:100%;
+	background:transparent url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/load-indicator.gif) no-repeat scroll 50% 50%;
+}
+.lof-main-outer{
+	position:relative;
+	height:100%;
+	width:100%px;
+	z-index:3px;
+	overflow:hidden;
+}
+
+
+/*******************************************************/
+.lof-main-item-desc {
+	z-index:100;
+	position:absolute;
+	bottom:0px;
+	width: 978px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/bg_trans.png);
+	height:70px;
+}
+.lof-main-item-desc p {
+	text-align: center;
+	padding:0;
+	font-size: 110%;
+}
+.lof-main-item-desc h2 {
+        margin: 0;
+        padding: 3px;
+        text-align: center;
+        border-bottom: 0;
+        font-size: 150% !important;
+        color: white !important;
+        font-weight: normal;
+}
+
+/* main flash */
+ul.lof-main-wapper{
+	/* margin-right:auto; */
+	background:transparent url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/load-indicator.gif) no-repeat scroll 50% 50%;
+	padding:0px;
+	margin:0;
+	position:relative;
+}
+
+ul.lof-main-wapper li{
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	width: 978px;
+	text-align: center;
+}
+.lof-opacity  li{
+	position:absolute;
+	top:0;
+	left:0;
+	float:inherit;
+}
+ul.lof-main-wapper li img{
+	padding:0px;	
+}
+
+/* item navigator */
+.lof-navigator-wapper {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/transparent_bg.png) repeat;
+	padding:5px 0px;
+}
+.lof-navigator-outer{
+	position:relative;
+	z-index:100;
+	/*height:180px;
+	width:310px;*/
+	overflow:hidden;
+	color:#FFF;
+	float:left
+}
+ul.lof-navigator{
+	top:0;
+	padding:0;
+	margin:0;
+	position:absolute;
+	width:100%;
+}
+ul.lof-navigator li{
+	cursor:hand; 
+	cursor:pointer;
+	list-style:none;
+	padding:0;
+	margin-left:0px;
+	overflow:hidden;
+	float:left;
+	display:block;
+
+	text-align:center;
+
+}
+ul.lof-navigator li img{
+	border:#666 solid 3px;	
+}
+ul.lof-navigator li.active img, ul.lof-navigator li:hover img {
+	border:#A8A8A8 solid 3px;
+}
+.lof-main-outer .lof-next,  .lof-main-outer .lof-previous{
+	display:block;
+	width:40px;
+	color:#FFF;
+	cursor:pointer;
+	position:absolute;
+	height:100%;
+	z-index:3;
+	top:-10px;
+	text-indent:-999px;
+
+}
+.lof-main-outer .lof-next {
+	right:05px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/right_carousel.png) no-repeat right center;
+}
+.lof-main-outer .lof-previous {
+	left:05px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/left_carousel.png) no-repeat left center;
+}
+
+.slideshow-holder h4 {
+    border: none;
+}
+
+.slideshow-holder {
+    background: none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.apf-slidecontent{
+	position: absolute;
+	margin-top: 155px;
+}
+
+.apf-slidecontent, .apf-slidecontent a {
+	color:#FFF;	
+}
+.apf-slidecontent a.readmore{
+	color:#58B1EA;
+	font-size:95%;
+	
+}
+.apf-slidecontent{
+	/*border:#F4F4F4 solid 1px;*/
+}
+.apf-slidecontent .preload{
+	width:342px;
+	height:291px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100000;
+	text-align:center;
+	background:#FFF
+}
+.apf-slidecontent .preload div{
+	height:100%;
+	width:100%;
+	background:transparent url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/load-indicator.gif) no-repeat scroll 50% 50%;
+}
+.apf-main-outer{
+	position:relative;
+	height:291px;
+	width:342px;
+	z-index:3px;
+	overflow:hidden;
+}
+
+
+/*******************************************************/
+.apf-main-item-desc {
+	z-index:100;
+	position:absolute;
+	bottom:0px;
+	width: 342px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/bg_trans.png);
+	height:70px;
+}
+.apf-main-item-desc p {
+	text-align: center;
+	padding:0;
+	font-size: 110%;
+}
+.apf-main-item-desc h2 {
+        margin: 0;
+        padding: 3px;
+        text-align: center;
+        border-bottom: 0;
+        font-size: 150% !important;
+        color: white !important;
+        font-weight: normal;
+}
+
+/* main flash */
+ul.apf-main-wapper{
+	/* margin-right:auto; */
+	background:transparent url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/load-indicator.gif) no-repeat scroll 50% 50%;
+	padding:0px;
+	margin:0;
+	position:relative;
+}
+
+ul.apf-main-wapper li{
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	position:absolute;
+	width: 342px;
+	text-align: center;
+}
+.apf-opacity  li{
+	position:absolute;
+	top:0;
+	left:0;
+	float:inherit;
+}
+ul.apf-main-wapper li img{
+	padding:0px;	
+}
+
+/* item navigator */
+.apf-navigator-wapper {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/transparent_bg.png) repeat;
+	padding:5px 0px;
+}
+.apf-navigator-outer{
+	position:relative;
+	z-index:100;
+	/*height:180px;
+	width:310px;*/
+	overflow:hidden;
+	color:#FFF;
+	float:left
+}
+ul.apf-navigator{
+	top:0;
+	padding:0;
+	margin:0;
+	position:absolute;
+	width:100%;
+}
+ul.apf-navigator li{
+	cursor:hand; 
+	cursor:pointer;
+	list-style:none;
+	padding:0;
+	margin-left:0px;
+	overflow:hidden;
+	float:left;
+	display:block;
+
+	text-align:center;
+
+}
+ul.apf-navigator li img{
+	border:#666 solid 3px;	
+}
+ul.apf-navigator li.active img, ul.apf-navigator li:hover img {
+	border:#A8A8A8 solid 3px;
+}
+.apf-main-outer .apf-next,  .apf-main-outer .apf-previous{
+	display:block;
+	width:40px;
+	color:#FFF;
+	cursor:pointer;
+	position:absolute;
+	height:100%;
+	z-index:3;
+	top:-10px;
+	text-indent:-999px;
+
+}
+.apf-main-outer .apf-next {
+	right:05px;
+	/*background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/right_carousel.png) no-repeat right center;*/
+}
+.apf-main-outer .apf-previous {
+	left:05px;
+	/*background:url(/web/20240908181103im_/https://privacyforum.eu/portal_layout/privacy_forum/scheme/left_carousel.png) no-repeat left center;*/
+}
+
+/*
+     FILE ARCHIVED ON 18:11:03 Sep 08, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:13:36 Feb 05, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.681
+  exclusion.robots: 0.024
+  exclusion.robots.policy: 0.01
+  esindex: 0.013
+  cdx.remote: 62.753
+  LoadShardBlock: 471.771 (3)
+  PetaboxLoader3.datanode: 296.079 (4)
+  PetaboxLoader3.resolve: 227.108 (2)
+  load_resource: 183.757
+*/
