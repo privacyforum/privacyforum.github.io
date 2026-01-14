@@ -1,0 +1,21 @@
+title: Annual Privacy Forum 2026
+description: Salzburg, Austria | 9-10 September 2026
+
+# PRODUCTION URLS
+url: "https://privacyforum.eu" 
+baseurl: ""                   
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins must be explicitly listed here to work on GitHub
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .jekyll-cache/
+  - .sass-cache/
