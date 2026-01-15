@@ -368,10 +368,9 @@ nav ul li ul li a:hover {
     padding: 15px 30px;
     background: var(--intense-cherry);
 }
-/* --- PROGRAM COMMITTEE GRID (Optimized for 46+ Members) --- */
+/* --- PROGRAM COMMITTEE GRID --- */
 .pc-grid {
     display: grid;
-    /* This creates a dynamic grid that fits as many columns as possible */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
     margin-top: 20px;
