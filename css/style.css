@@ -275,6 +275,8 @@ nav ul li ul li a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* --- LAYOUT --- */
 .container {
     max-width: 1200px;
@@ -365,6 +367,66 @@ nav ul li ul li a:hover {
     font-size: 1.1rem;
     padding: 15px 30px;
     background: var(--intense-cherry);
+}
+/* --- PROGRAM COMMITTEE GRID (Optimized for 46+ Members) --- */
+.pc-grid {
+    display: grid;
+    /* This creates a dynamic grid that fits as many columns as possible */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pc-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pc-card:hover {
+    transform: translateX(5px);
+    border-color: var(--baltic-blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pc-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    /* This prevents the image from shrinking when names are long */
+    flex-shrink: 0;
+}
+
+.pc-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pc-info strong {
+    color: var(--baltic-blue);
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.pc-info span {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Ensure Program Committee collapses correctly on mobile */
+@media (max-width: 600px) {
+    .pc-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* For CTA */

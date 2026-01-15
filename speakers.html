@@ -9,18 +9,14 @@ title: Speakers
             <h2>Speakers</h2>
         </section>
         <div class="speakers-grid">
+            {% for speaker in site.data.speakers %}
             <div class="speaker-card">
-                <img src="{{ '/images/wiewiorowski.jpg' | relative_url }}" alt="Wojciech Wiewiórowski">
-                <strong>Wojciech Wiewiórowski</strong>
-                <span>EDPS</span>
+                <img src="{{ '/images/' | append: speaker.image | relative_url }}" alt="{{ speaker.name }}">
+                <strong>{{ speaker.name }}</strong>
+                <span>{{ speaker.affiliation }}</span>
             </div>
-            <div class="speaker-card">
-                <img src="{{ '/images/drogkaris.jpg' | relative_url }}" alt="Prokopios Drogkaris">
-                <strong>Prokopios Drogkaris</strong>
-                <span>ENISA</span>
-            </div>
+            {% endfor %}
         </div>
     </main>
-
     {% include sidebar.html %}
 </div>

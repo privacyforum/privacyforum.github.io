@@ -1,0 +1,24 @@
+- name: "Frank Pallas"
+  affiliation: "University of Salzburg"
+  image: "pallas.png"
+  featured: true
+- name: "Nicola Leschke"
+  affiliation: "University of Salzburg"
+  image: "noPicture.png"
+  featured: true
+- name: "Mahdi Akil"
+  affiliation: "University of Salzburg"
+  image: "noPicture.png"
+  featured: true
+- name: "Kai Rannenberg"
+  affiliation: "Goethe University Frankfurt"
+  image: "rannenberg.jpg"
+  featured: true
+- name: "Narges Arastouei"
+  affiliation: "Goethe University Frankfurt"
+  image: "narges.jpg"
+  featured: true
+- name: "Meiko Jensen"
+  affiliation: "Karlstad University"
+  image: "jensen.jpg"
+  featured: true

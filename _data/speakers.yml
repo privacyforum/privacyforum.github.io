@@ -1,0 +1,8 @@
+- name: "Speaker_1"
+  affiliation: "place"
+  image: "noPicture.png"
+  featured: true 
+- name: "Speaker_2"
+  affiliation: "place"
+  image: "noPicture.png"
+  featured: false

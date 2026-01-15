@@ -10,21 +10,31 @@ title: Committees
         </section>
         
         <h3>Organizing Committee</h3>
-        <ul>
-            <li>Narges Arastouei, Goethe University Frankfurt</li>
-            <li>Meiko Jensen, Karlstad University</li>
-            <li>Kai Rannenberg, Goethe University Frankfurt</li>
-        </ul>
+        <div class="speakers-grid">
+            {% for person in site.data.organizers %}
+            <div class="speaker-card">
+                <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
+                <strong>{{ person.name }}</strong>
+                <span>{{ person.affiliation }}</span>
+            </div>
+            {% endfor %}
+        </div>
+
+        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
 
         <h3>Program Committee</h3>
-        <ul style="columns: 2;">
-            <li>Isabel Barberá, Rhite</li>
-            <li>Prokopios Drogkaris, ENISA</li>
-            <li>Simone Fischer-Hübner, Karlstad University</li>
-            <li>Marit Hansen, ULD</li>
-            <li>Jaap-Henk Hoepman, Radboud University</li>
-            <li>Ina Schiering, Ostfalia University</li>
-        </ul>
+        <div class="pc-grid">
+            {% for member in site.data.program_committee %}
+            <div class="pc-card">
+                <img src="{{ '/images/' | append: member.image | relative_url }}" alt="{{ member.name }}">
+                <div class="pc-info">
+                    <strong>{{ member.name }}</strong>
+                    <span>{{ member.affiliation }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </main>
+
     {% include sidebar.html %}
 </div>
