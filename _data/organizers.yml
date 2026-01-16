@@ -6,10 +6,6 @@
   affiliation: "University of Salzburg"
   image: "leschke.jpg"
   featured: true
-- name: "Mahdi Akil"
-  affiliation: "University of Salzburg"
-  image: "noPicture.png"
-  featured: true
 - name: "Kai Rannenberg"
   affiliation: "Goethe University Frankfurt"
   image: "rannenberg.jpg"
@@ -18,7 +14,15 @@
   affiliation: "Goethe University Frankfurt"
   image: "narges.jpg"
   featured: true
-- name: "Meiko Jensen"
-  affiliation: "Karlstad University"
-  image: "jensen.jpg"
+- name: "Michael Friedewald"
+  affiliation: "Fraunhofer ISI"
+  image: "friedewald.jpg"
+  featured: true
+- name: "Petros Efstathopoulos"
+  affiliation: "RSAC conference"
+  image: "efstathopoulos.jpg"
+  featured: true
+- name: "Mahdi Akil"
+  affiliation: "University of Salzburg"
+  image: "akil.png"
   featured: true
