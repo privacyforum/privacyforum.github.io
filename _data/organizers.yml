@@ -14,6 +14,10 @@
   affiliation: "Goethe University Frankfurt"
   image: "narges.jpg"
   featured: true
+- name: "Mahdi Akil"
+  affiliation: "University of Salzburg"
+  image: "akil.png"
+  featured: true
 - name: "Michael Friedewald"
   affiliation: "Fraunhofer ISI"
   image: "friedewald.jpg"
@@ -25,8 +29,4 @@
 - name: "Meiko Jensen"
   affiliation: "Karlstad University"
   image: "jensen.jpg"
-  featured: true
-- name: "Mahdi Akil"
-  affiliation: "University of Salzburg"
-  image: "akil.png"
   featured: true
