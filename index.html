@@ -32,6 +32,7 @@ title: Home
             <p>Against this background, <strong>APF 2026</strong> invites you to Salzburg on <strong>September 9-10</strong>.</p>
         </section>
 
+         <!-- UNCOMMENT BELOW WHEN WE HAVE SPEAKERS
         <section>
             <h3>Keynote Speakers</h3>
             <div class="speakers-grid">
@@ -39,21 +40,23 @@ title: Home
                 {% for speaker in featured_speakers %}
                 <div class="speaker-card">
                     Coming Soon.
-                    <!-- UNCOMMENT BELOW WHEN WE HAVE SPEAKERS
+                    !-- UNCOMMENT BELOW WHEN WE HAVE SPEAKERS
                     <img src="{{ '/images/' | append: speaker.image | relative_url }}" alt="{{ speaker.name }}">
                     <strong>{{ speaker.name }}</strong>
                     <span>{{ speaker.affiliation }}</span>
-                    -->
+                    --
                 </div>
                 {% endfor %}
             </div>
             <p style="text-align: right;"><a href="{{ '/speakers.html' | relative_url }}">View all speakers &rarr;</a></p>
         </section>
-
+    -->
+    
         <section>
-            <h3>Organizing Team</h3>
+            <h3>Speakers and Team</h3>
             <div class="speakers-grid">
-                {% assign featured_orgs = site.data.organizers | where: "featured", "true" | sort: "name" %}
+                {% assign featured_orgs = site.data.organizers | where: "featured", "true"  %}
+                <!-- | sort: "name" would sort by first name-->
                 {% for person in featured_orgs %}
                 <div class="speaker-card">
                     <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
@@ -62,7 +65,7 @@ title: Home
                 </div>
                 {% endfor %}
             </div>
-            <p style="text-align: right;"><a href="{{ '/committees.html' | relative_url }}">View full committee &rarr;</a></p>
+            <p style="text-align: right;"><a href="{{ '/committees.html' | relative_url }}">View all committees &rarr;</a></p>
         </section>
     </main>
 
