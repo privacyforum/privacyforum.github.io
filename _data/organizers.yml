@@ -22,6 +22,10 @@
   affiliation: "RSAC conference"
   image: "efstathopoulos.jpg"
   featured: true
+- name: "Meiko Jensen"
+  affiliation: "Karlstad University"
+  image: "jensen.jpg"
+  featured: true
 - name: "Mahdi Akil"
   affiliation: "University of Salzburg"
   image: "akil.png"
