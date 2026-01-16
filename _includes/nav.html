@@ -3,7 +3,7 @@
         <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
         <li><a href="{{ '/news.html' | relative_url }}" class="{% if page.url contains 'news' %}active{% endif %}">News</a></li>
         <li>
-            <a href="#">Programme &#9662;</a>
+            <a href="#" class="{% if page.url contains 'programme' or page.url contains 'speakers'%}active{% endif %}">Programme &#9662;</a>
             <ul>
                 <li><a href="{{ '/programme.html' | relative_url }}">Schedule</a></li>
                 <li><a href="{{ '/speakers.html' | relative_url }}">Speakers</a></li>
