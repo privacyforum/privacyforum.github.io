@@ -1,32 +1,40 @@
 - name: "Frank Pallas"
   affiliation: "University of Salzburg"
   image: "pallas.png"
+  webpage: "https://pepsys-group.github.io/team/fp"
   featured: true
 - name: "Nicola Leschke"
   affiliation: "University of Salzburg"
   image: "leschke.jpg"
+  webpage: "https://pepsys-group.github.io/team/nl"
   featured: true
 - name: "Kai Rannenberg"
   affiliation: "Goethe University Frankfurt"
   image: "rannenberg.jpg"
+  webpage: "https://www.m-chair.de/team?view=article&id=30:prof-dr-kai-rannenberg"
   featured: true
 - name: "Narges Arastouei"
   affiliation: "Goethe University Frankfurt"
   image: "narges.jpg"
+  webpage: "https://www.m-chair.de/team?view=article&id=33:dr-narges-arastouei"
   featured: true
 - name: "Mahdi Akil"
   affiliation: "University of Salzburg"
   image: "akil.png"
+  webpage: "https://pepsys-group.github.io/team/ma"
   featured: true
 - name: "Michael Friedewald"
   affiliation: "Fraunhofer ISI"
   image: "friedewald.jpg"
+  webpage: "https://www.isi.fraunhofer.de/en/competence-center/neue-technologien/mitarbeiter/friedewald.html"
   featured: true
 - name: "Petros Efstathopoulos"
   affiliation: "RSAC conference"
   image: "efstathopoulos.jpg"
+  webpage: "https://www.rsaconference.com/experts/petros-efstathopoulos"
   featured: true
 - name: "Meiko Jensen"
   affiliation: "Karlstad University"
   image: "jensen.jpg"
+  webpage: "https://www.kau.se/en/researchers/meiko-jensen"
   featured: true

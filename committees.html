@@ -8,14 +8,22 @@ title: Committees
         <section class="hero">
             <h2>Committees</h2>
         </section>
-        
+
         <h3>Organizing Committee</h3>
         <div class="speakers-grid">
             {% for person in site.data.organizers %}
             <div class="speaker-card">
-                <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
-                <strong>{{ person.name }}</strong>
-                <span>{{ person.affiliation }}</span>
+                {% if person.webpage %}
+                <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
+                    {% endif %}
+
+                    <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
+                    <strong>{{ person.name }}</strong>
+                    <span>{{ person.affiliation }}</span>
+
+                    {% if person.webpage %}
+                </a>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
