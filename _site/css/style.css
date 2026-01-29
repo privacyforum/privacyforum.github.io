@@ -346,7 +346,6 @@ nav ul li ul li a:hover {
     display: block; /* Makes the whole card area clickable */
 }
 
-/* Optional: Slight underline on the name when hovering over the card */
 .speaker-card a:hover strong {
     text-decoration: underline;
 }
