@@ -1,8 +1,4 @@
-- name: "Speaker_1"
-  affiliation: "place"
-  image: "noPicture.png"
+- name: "Prokopios Drogkaris"
+  affiliation: "ENISA"
+  image: "drogkaris.jpg"
   featured: true 
-- name: "Speaker_2"
-  affiliation: "place"
-  image: "noPicture.png"
-  featured: false
