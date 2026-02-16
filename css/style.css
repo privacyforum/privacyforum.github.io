@@ -375,6 +375,22 @@ nav ul li ul li a:hover {
     height: auto;
 }
 
+.organizers-box img {
+    max-width: 100%;
+}
+
+.organizers-box {
+    overflow: hidden;
+}
+
+.organizers-box img.salzburg-logo {
+    width: 100%;
+    max-width: 100%;
+    transform: scale(1.55) translate(40px, 8px);
+    transform-origin: center center;
+    margin: 18px 0;
+}
+
 .btn {
     display: inline-block;
     background: var(--baltic-blue);
@@ -531,6 +547,11 @@ footer {
         display: block;
         width: 100%;
         border-bottom: none;
+        font-size: 1rem;
+    }
+
+    nav a::after {
+        display: none;
     }
 
     nav ul li ul {
