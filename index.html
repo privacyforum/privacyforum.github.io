@@ -53,26 +53,6 @@ title: Home
             </div>
         </section>
 
-        <!-- UNCOMMENT BELOW WHEN WE HAVE SPEAKERS
-        <section>
-            <h3>Keynote Speakers</h3>
-            <div class="speakers-grid">
-                {% assign featured_speakers = site.data.speakers | where: "featured", "true" %}
-                {% for speaker in featured_speakers %}
-                <div class="speaker-card">
-                    Coming Soon.
-                    !-- UNCOMMENT BELOW WHEN WE HAVE SPEAKERS
-                    <img src="{{ '/images/' | append: speaker.image | relative_url }}" alt="{{ speaker.name }}">
-                    <strong>{{ speaker.name }}</strong>
-                    <span>{{ speaker.affiliation }}</span>
-                    --
-                </div>
-                {% endfor %}
-            </div>
-            <p style="text-align: right;"><a href="{{ '/speakers.html' | relative_url }}">View all speakers &rarr;</a></p>
-        </section>
-    -->
-       
         <section>
             <h3>Speakers and Team</h3>
             <div class="speakers-grid">
@@ -93,7 +73,7 @@ title: Home
                 </div>
                 {% endfor %}
             </div>
-            <p style="text-align: right;"><a href="{{ '/committees.html' | relative_url }}">View committees &rarr;</a>
+            <p style="text-align: right;"><a href="{{ '/committees.html' | relative_url }}" class="btn">View Committees</a>
             </p>
         </section>
     </main>
