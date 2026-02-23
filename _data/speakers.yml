@@ -5,6 +5,7 @@
 - name: "Matthias Schmidl"
   affiliation: "Austrian Data Protection Authority"
   image: "schmidl.jpg"
+  webpage: "https://data-protection-authority.gv.at/"
   featured: true
 - name: "Luca Tagliaretti"
   affiliation: "ECCC"

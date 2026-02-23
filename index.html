@@ -54,19 +54,37 @@ title: Home
         </section>
 
         <section>
-            <h3>Speakers and Team</h3>
+            <h3>Speakers</h3>
             <div class="speakers-grid">
-                {% assign featured_orgs = site.data.organizers | where: "featured", "true" %}
+                {% assign featured_speakers = site.data.speakers | where_exp: "person", "person.featured" %}
+                {% for person in featured_speakers %}
+                <div class="speaker-card">
+                    {% if person.webpage %}
+                    <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
+                        {% endif %}
+                        <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
+                        <strong>{{ person.name }}</strong>
+                        <span>{{ person.affiliation }}</span>
+                        {% if person.webpage %}
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <p style="text-align: right;"><a href="{{ '/speakers.html' | relative_url }}" class="btn">View Speakers</a>
+            </p>
+
+            <h3 style="margin-top: 28px;">Organizing Team</h3>
+            <div class="speakers-grid">
+                {% assign featured_orgs = site.data.organizers | where_exp: "person", "person.featured" %}
                 {% for person in featured_orgs %}
                 <div class="speaker-card">
                     {% if person.webpage %}
                     <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
                         {% endif %}
-
                         <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
                         <strong>{{ person.name }}</strong>
                         <span>{{ person.affiliation }}</span>
-
                         {% if person.webpage %}
                     </a>
                     {% endif %}
