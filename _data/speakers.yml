@@ -11,3 +11,8 @@
   image: "tagliaretti.jpg"
   webpage: "https://cybersecurity-centre.europa.eu/news/luca-tagliaretti-elected-new-executive-director-eu-cybersecurity-competence-centre-2023-10-13_en"
   featured: True
+- name: "Helmut Leopold"
+  affiliation: "Austrian Institute of Technology"
+  image: "noPicture.png"
+  webpage: "https://publications.ait.ac.at/en/persons/helmut.leopold"
+  featured: True
