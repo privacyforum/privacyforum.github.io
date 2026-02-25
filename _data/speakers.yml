@@ -1,7 +1,3 @@
-- name: "Prokopios Drogkaris"
-  affiliation: "ENISA"
-  image: "drogkaris.jpg"
-  featured: true 
 - name: "Matthias Schmidl"
   affiliation: "Austrian Data Protection Authority"
   image: "schmidl.jpg"
