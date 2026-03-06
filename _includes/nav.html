@@ -9,7 +9,13 @@
                 <li><a href="{{ '/speakers.html' | relative_url }}">Speakers</a></li>
             </ul>
         </li>
-        <li><a href="{{ '/callforpapers.html' | relative_url }}" class="{% if page.url == '/callforpapers.html' %}active{% endif %}">Call for Papers</a></li>
+        <li>
+            <a href="#" class="{% if page.url contains 'call'%}active{% endif %}">Call for... &#9662;</a>
+            <ul>
+                <li><a href="{{ '/callforpapers.html' | relative_url }}">Call for Papers</a></li>
+                <li><a href="{{ '/callforsponsorship.html' | relative_url }}">Call for Sponsorship</a></li>
+            </ul>
+        </li>
         <li><a href="{{ '/registration.html' | relative_url }}" class="{% if page.url == '/registration.html' %}active{% endif %}">Registration</a></li>
         <li><a href="{{ '/venue.html' | relative_url }}" class="{% if page.url == '/venue.html' %}active{% endif %}">Venue</a></li>
         <li>
