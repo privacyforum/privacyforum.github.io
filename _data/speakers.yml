@@ -1,8 +1,13 @@
+- name: "Wojciech Wiewiórowski"
+  affiliation: "EDPS"
+  image: "wiewiorowski.jpg"
+  webpage: "https://www.edps.europa.eu/about-edps/members-mission/supervisors/wojciech-wiewi%C3%B3rowski_en"
+  featured: True
 - name: "Matthias Schmidl"
   affiliation: "Austrian Data Protection Authority"
   image: "schmidl.jpg"
   webpage: "https://data-protection-authority.gv.at/"
-  featured: true
+  featured: True
 - name: "Luca Tagliaretti"
   affiliation: "ECCC"
   image: "tagliaretti.jpg"
