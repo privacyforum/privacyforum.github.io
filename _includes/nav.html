@@ -19,9 +19,10 @@
         <li><a href="{{ '/registration.html' | relative_url }}" class="{% if page.url == '/registration.html' %}active{% endif %}">Registration</a></li>
         <li><a href="{{ '/venue.html' | relative_url }}" class="{% if page.url == '/venue.html' %}active{% endif %}">Venue</a></li>
         <li>
-            <a href="#" class="{% if page.url contains 'committees' or page.url contains 'previous' or page.url contains 'contact' %}active{% endif %}">About &#9662;</a>
+            <a href="#" class="{% if page.url contains 'committees' or page.url contains 'scientific_steering_board' or page.url contains 'previous' or page.url contains 'contact' %}active{% endif %}">About &#9662;</a>
             <ul>
                 <li><a href="{{ '/committees.html' | relative_url }}">Committees</a></li>
+                <li><a href="{{ '/scientific_steering_board.html' | relative_url }}">Scientific Steering Board</a></li>
                 <li><a href="{{ '/previous_editions.html' | relative_url }}">Previous Editions</a></li>
                 <li><a href="{{ '/contact.html' | relative_url }}">Contact Us</a></li>
             </ul>

@@ -30,27 +30,6 @@ title: Committees
 
         <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
 
-        <h3>Steering Committee</h3>
-        <div class="speakers-grid">
-            {% for person in site.data.steering_committee %}
-            <div class="speaker-card">
-                {% if person.webpage and person.webpage != "#" %}
-                <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
-                    {% endif %}
-
-                    <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
-                    <strong>{{ person.name }}</strong>
-                    <span>{{ person.affiliation }}</span>
-
-                    {% if person.webpage and person.webpage != "#" %}
-                </a>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-
-        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
-
         <h3>Program Committee</h3>
         <div class="pc-grid">
             coming soon..

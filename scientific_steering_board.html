@@ -1,0 +1,56 @@
+---
+layout: default
+title: Scientific Steering Board
+---
+
+<div class="container">
+    <main>
+        <section class="hero">
+            <h2>Scientific Steering Board</h2>
+        </section>
+
+        {% assign chair = site.data.steering_committee | where: "name", "Meiko Jensen" | first %}
+
+        <h3>Steering Board Chair</h3>
+        <div class="speakers-grid">
+            {% if chair %}
+            <div class="speaker-card">
+                {% if chair.webpage and chair.webpage != "#" %}
+                <a href="{{ chair.webpage }}" target="_blank" rel="noopener noreferrer">
+                    {% endif %}
+
+                    <img src="{{ '/images/' | append: chair.image | relative_url }}" alt="{{ chair.name }}">
+                    <strong>{{ chair.name }}</strong>
+                    <span>{{ chair.affiliation }}</span>
+
+                    {% if chair.webpage and chair.webpage != "#" %}
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+
+        <h3>Board</h3>
+        <div class="speakers-grid">
+            {% for person in site.data.steering_committee %}
+            {% unless person.name == "Meiko Jensen" %}
+            <div class="speaker-card">
+                {% if person.webpage and person.webpage != "#" %}
+                <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
+                    {% endif %}
+
+                    <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
+                    <strong>{{ person.name }}</strong>
+                    <span>{{ person.affiliation }}</span>
+
+                    {% if person.webpage and person.webpage != "#" %}
+                </a>
+                {% endif %}
+            </div>
+            {% endunless %}
+            {% endfor %}
+        </div>
+    </main>
+
+    {% include sidebar.html %}
+</div>
