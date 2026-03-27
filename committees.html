@@ -31,23 +31,28 @@ title: Committees
         <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
 
         <h3>Program Committee</h3>
-        <div class="pc-grid">
-            coming soon..
-            <!-- UNCOMMENT BELOW WHEN WE HAVE FINAL LIST
-            {% for member in site.data.program_committee %}
-            <div class="pc-card">
-                
-                
-                <img src="{{ '/images/' | append: member.image | relative_url }}" alt="{{ member.name }}">
-                <div class="pc-info">
-                    <strong>{{ member.name }}</strong>
-                    <span>{{ member.affiliation }}</span>
-                </div>
-                
-            </div>
+        {% assign pc_chairs = site.data.program_committee | where: "role", "chair" %}
+        {% assign pc_members = site.data.program_committee | where: "role", "member" | sort: "last_name" %}
+
+        <h4>Chairs</h4>
+        <ul class="committee-list committee-list-chairs">
+            {% for person in pc_chairs %}
+            <li>
+                <strong class="committee-name">{{ person.name }}</strong>
+                {% if person.affiliation %}<span class="committee-affiliation">{{ person.affiliation }}</span>{% endif %}
+            </li>
             {% endfor %}
-            -->
-        </div>
+        </ul>
+
+        <h4>Members</h4>
+        <ul class="committee-list committee-list-members">
+            {% for person in pc_members %}
+            <li>
+                <strong class="committee-name">{{ person.name }}</strong>
+                {% if person.affiliation %}<span class="committee-affiliation">{{ person.affiliation }}</span>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
     </main>
 
     {% include sidebar.html %}
