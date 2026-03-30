@@ -18,3 +18,8 @@
   image: "leopold.jpg"
   webpage: "https://publications.ait.ac.at/en/persons/helmut.leopold"
   featured: True
+- name: "Katarzyna Prusak-Gorniak"
+  affiliation: "ECCC"
+  image: "Prusak.webp"
+  webpage: "https://cerre.eu/biographies/katarzyna-prusak-gorniak/"
+  featured: True
