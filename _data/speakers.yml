@@ -23,3 +23,8 @@
   image: "prusak.jpg"
   webpage: "https://cerre.eu/biographies/katarzyna-prusak-gorniak/"
   featured: True
+- name: "Jelena Virant Burnik"
+  affiliation: "Information Commissioner of the Republic of Slovenia"
+  image: "burnik.png"
+  webpage: "https://www.ip-rs.si/en/about/information-commissioner"
+  featured: True
