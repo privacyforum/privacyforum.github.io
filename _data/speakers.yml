@@ -28,3 +28,8 @@
   image: "burnik.png"
   webpage: "https://www.ip-rs.si/en/about/information-commissioner"
   featured: True
+- name: "Irene Kamara"
+  affiliation: "Tilburg University"
+  image: "kamara.jpg"
+  webpage: "https://www.tilburguniversity.edu/staff/i-kamara"
+  featured: True
