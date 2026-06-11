@@ -33,3 +33,8 @@
   image: "kamara.jpg"
   webpage: "https://www.tilburguniversity.edu/staff/i-kamara"
   featured: True
+- name: "Jan Schallaböck"
+  affiliation: " iRights law,"
+  image: "Schallaboeck.jpg"
+  webpage: "https://irights-law.de/team/jan-schallaboeck/"
+  featured: True
