@@ -3,65 +3,123 @@ layout: default
 title: Registration
 ---
 
+<style>
+    .registration-card {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--baltic-blue);
+        border-radius: 8px;
+        padding: 20px 22px;
+        margin: 24px 0;
+    }
+
+    .registration-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 18px 0 24px;
+        background: var(--white);
+        border: 1px solid var(--border-light);
+    }
+
+    .registration-table th {
+        background: var(--baltic-blue);
+        color: var(--white);
+        text-align: left;
+        padding: 12px;
+    }
+
+    .registration-table td {
+        border-top: 1px solid var(--border-light);
+        padding: 12px;
+        vertical-align: top;
+    }
+
+    .registration-table td:not(:first-child),
+    .registration-table th:not(:first-child) {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .registration-table small {
+        color: #555;
+        display: block;
+        margin-top: 4px;
+        line-height: 1.45;
+    }
+
+    .btn-disabled {
+        background: #ccc;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 700px) {
+        .registration-table {
+            font-size: 0.92rem;
+        }
+
+        .registration-table th,
+        .registration-table td {
+            padding: 10px 8px;
+        }
+    }
+</style>
+
 <div class="container">
     <main>
         <section class="hero">
             <h2>Registration</h2>
-            <p>Welcome to the registration portal for APF 2026.</p>
+            <p>Registration information for APF 2026.</p>
         </section>
 
-        <div style="background: #fff; padding: 16px 18px; border: 1px solid #eee; border-left: 4px solid var(--intense-cherry); border-radius: 6px; margin-bottom: 16px;">
-            <strong style="color: var(--intense-cherry);">Participation Fee Notice:</strong>
-            APF 2026 will include a participation fee (amount to be announced). The fee is planned to cover open-access publication costs and core programme/social dinner costs. Fee updates will be published regularly as details are finalized.
-        </div>
-        <i>Detailed registration information will be provided soon.</i>
-        <!--
         <section>
-            <h3>On-site Participation</h3>
-            <p>On-site participation in the Annual Privacy Forum 2026 is <strong>free of charge</strong> for registered participants (no registration fees).</p>
-            
-            <div style="background: #fff; padding: 20px; border: 1px solid #eee; border-left: 4px solid var(--baltic-blue); border-radius: 4px; margin-top: 20px;">
-                <p style="margin-top: 0;">If you plan to attend in person, please register following this link:</p>
-                <a href="#" class="btn">Register for On-site APF 2026</a>
+            <h3>Participation Fees</h3>
+            <p>We offer two different types of tickets, all of which are subject to reduced early-bird rates until <strong class="deadline">Sunday, July 19, 2026</strong>.</p>
+
+            <table class="registration-table">
+                <thead>
+                    <tr>
+                        <th>Ticket type</th>
+                        <th>Early-bird</th>
+                        <th>Regular</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Regular ticket</td>
+                        <td>380&nbsp;&euro;</td>
+                        <td>430&nbsp;&euro;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Supporter ticket
+                            <small>Get one ticket for yourself and sponsor a further student's APF admission. You may select the supported student yourself or leave nominations to us. Further details may be clarified via e-mail.</small>
+                        </td>
+                        <td>480&nbsp;&euro;</td>
+                        <td>520&nbsp;&euro;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Subject to availability, we might be able to offer a discount for (PhD) students. If that is of interest to you, please contact <a href="mailto:nicola.leschke@plus.ac.at">nicola.leschke@plus.ac.at</a>.</p>
+
+            <div class="registration-card">
+                <h3>Registration Tool</h3>
+                <p>Registration and payment are handled by the University of Salzburg's event management system. During registration, we also ask for your attendance days, planned participation in the social event(s), and dietary restrictions.</p>
+                <p><a href="#" class="btn btn-disabled">Registration link to follow</a></p>
             </div>
         </section>
-
-        <section style="margin-top: 40px;">
-            <h3>Virtual Participation</h3>
-            <p>Virtual participation in the Annual Privacy Forum 2026 is <strong>free of charge</strong>.</p>
-            <p><strong>There is no need to register for virtual participation!</strong></p>
-
-            <div style="background: #fff; padding: 20px; border: 1px solid #eee; border-radius: 8px; margin-top: 20px;">
-                <h4 style="margin-top: 0;">Access the Conference</h4>
-                <p>The conference video system can be accessed via the link below:</p>
-                <p>
-                    <a href="#" target="_blank" style="font-weight: bold; font-size: 1.1rem;">
-                        Join Online
-                    </a>
-                </p>
-                
-                <div style="background: var(--bg-light); padding: 15px; border-radius: 4px; margin-top: 15px; font-size: 0.9rem; color: #555;">
-                    <strong>House Rules:</strong>
-                    <ul style="margin-bottom: 0;">
-                        <li>Please keep your <strong>microphones muted</strong> and your <strong>webcams turned off</strong>.</li>
-                        <li>If you want to ask questions to the speakers, please write your question in the chat.</li>
-                        <li>A moderator in the room will ask the questions on your behalf.</li>
-                        <li>Please use the chat rationally and only for topics relevant to the conference.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p style="margin-top: 20px; font-style: italic;">We hope you will enjoy APF 2026 online.</p>
-        </section>
-    -->
     </main>
 
     <aside>
         <div class="sidebar-box">
-            <h3>Venue</h3>
-            <img src="{{ '/images/salz.jpg' | relative_url }}" alt="Salzburg Venue">
-            <p><strong>Salzburg</strong><br>Address<br>5020 Salzburg, Austria</p>
-            <p><a href="{{ '/venue.html' | relative_url }}">View Travel Info</a></p>
+            <h3>Attendance</h3>
+            <img src="{{ '/images/salz.jpg' | relative_url }}" alt="Salzburg venue">
+            <p><strong>Unipark Nonntal</strong><br>
+            Erzabt-Klotz-Straße 1<br>
+            5020 Salzburg, Austria</p>
+            <p><a href="{{ '/venue.html' | relative_url }}">Venue</a><br>
+            <a href="{{ '/hotel_booking.html' | relative_url }}">Hotel Booking</a><br>
+            <a href="{{ '/travel.html' | relative_url }}">Travel Info</a></p>
         </div>
 
         <div class="sidebar-box">
