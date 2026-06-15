@@ -9,6 +9,7 @@ title: Programme
 {% assign speaker_matthias = site.data.speakers | where: "image", "schmidl.jpg" | first %}
 {% assign speaker_jelena = site.data.speakers | where: "image", "burnik.png" | first %}
 {% assign speaker_katarzyna = site.data.speakers | where: "image", "prusak.jpg" | first %}
+{% assign speaker_prokopios = site.data.speakers | where: "image", "drogkaris.jpg" | first %}
 {% assign speaker_irene = site.data.speakers | where: "image", "kamara.jpg" | first %}
 {% assign speaker_jan = site.data.speakers | where: "image", "schallaboeck.jpg" | first %}
 
@@ -18,6 +19,7 @@ title: Programme
 {% capture speaker_matthias_link %}<a href="{{ speaker_matthias.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_matthias.name }}</a>{% endcapture %}
 {% capture speaker_jelena_link %}<a href="{{ speaker_jelena.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jelena.name }}</a>{% endcapture %}
 {% capture speaker_katarzyna_link %}<a href="{{ speaker_katarzyna.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_katarzyna.name }}</a>{% endcapture %}
+{% capture speaker_prokopios_link %}<a href="{{ speaker_prokopios.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_prokopios.name }}</a>{% endcapture %}
 {% capture speaker_irene_link %}<a href="{{ speaker_irene.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_irene.name }}</a>{% endcapture %}
 {% capture speaker_jan_link %}<a href="{{ speaker_jan.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jan.name }}</a>{% endcapture %}
 
@@ -352,13 +354,13 @@ title: Programme
                         </tr>
                         <tr>
                             <td class="time-col">11:30-12:30</td>
-                            <td class="slot-col">Panel II</td>
-                            <td class="title-col">tbc</td>
+                            <td class="slot-col">ENISA Panel</td>
+                            <td class="title-col">Facilitating breach and incident reporting</td>
                             <td class="speaker-col">
+                                <span class="session-detail"><strong>Moderator:</strong> {{ speaker_prokopios_link }}</span>
                                 <ul class="session-speakers">
                                     <li>{{ speaker_jelena_link }}</li>
                                     <li>{{ speaker_katarzyna_link }}</li>
-                                    <li>tbc</li>
                                 </ul>
                             </td>
                         </tr>
