@@ -53,3 +53,8 @@
   image: "noPicture.png"
   webpage: "https://fpf.org/person/andreea-serban/"
   featured: True
+- name: "Prokopios Drogkaris"
+  affiliation: "ENISA"
+  image: "drogkaris.jpg"
+  webpage: "https://www.linkedin.com/in/pdrogk/"
+  featured: True
