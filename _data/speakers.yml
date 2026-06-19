@@ -38,3 +38,18 @@
   image: "schallaboeck.jpg"
   webpage: "https://irights-law.de/team/jan-schallaboeck/"
   featured: True
+- name: "Konstantinos Limniotis"
+  affiliation: " HDPA"
+  image: "limniotis.png"
+  webpage: "https://cgi.di.uoa.gr/~klimn/"
+  featured: True
+- name: "Dina Kampouraki"
+  affiliation: " EDPS"
+  image: "noPicture.png"
+  webpage: "https://www.linkedin.com/in/dina-kampouraki-5a463640/"
+  featured: True
+- name: "Andreea Șerban"
+  affiliation: " Future of Privacy Forum"
+  image: "noPicture.png"
+  webpage: "https://fpf.org/person/andreea-serban/"
+  featured: True
