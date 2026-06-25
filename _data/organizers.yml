@@ -28,11 +28,6 @@
   image: "friedewald.jpg"
   webpage: "https://www.isi.fraunhofer.de/en/competence-center/neue-technologien/mitarbeiter/friedewald.html"
   featured: true
-- name: "Petros Efstathopoulos"
-  affiliation: "RSAC conference"
-  image: "efstathopoulos.jpg"
-  webpage: "https://www.rsaconference.com/experts/petros-efstathopoulos"
-  featured: true
 - name: "Meiko Jensen"
   affiliation: "Karlstad University"
   image: "jensen.jpg"
