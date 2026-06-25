@@ -1,0 +1,148 @@
+---
+layout: default
+title: Accepted Papers
+---
+
+<style>
+    .accepted-papers-table-wrap {
+        width: 100%;
+        overflow-x: auto;
+        border: 1px solid var(--border-light);
+        background: var(--white);
+    }
+
+    .accepted-papers-table {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+        margin-top: 0;
+        background: var(--white);
+        table-layout: fixed;
+    }
+
+    .accepted-papers-table th {
+        background: var(--baltic-blue);
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .accepted-papers-table td {
+        padding: 14px 12px;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+        overflow-wrap: anywhere;
+    }
+
+    .accepted-papers-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .accepted-papers-table tr:hover {
+        background-color: #f7fafc;
+    }
+
+    .accepted-papers-authors {
+        width: 38%;
+    }
+
+    .accepted-papers-title {
+        width: 62%;
+    }
+
+    .accepted-papers-note {
+        margin-top: 12px;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .paper-format-tag {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: #eef4f8;
+        color: var(--baltic-blue);
+        font-size: 0.82rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+</style>
+
+<div class="container">
+    <main>
+        <section class="hero">
+            <h2>Accepted Papers</h2>
+            <p>The current list of accepted papers for APF 2026 is provided below.</p>
+        </section>
+
+        <section>
+            <div class="accepted-papers-table-wrap">
+                <table class="accepted-papers-table">
+                    <colgroup>
+                        <col class="accepted-papers-authors">
+                        <col class="accepted-papers-title">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Authors</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ramona Adair, Harald Zwingelberg, Michael Friedewald and Ina Schiering</td>
+                            <td>Informed Consent by Design: Developer-Oriented Privacy Best Practices for GDPR compliant mHealth Applications</td>
+                        </tr>
+                        <tr>
+                            <td>Giuseppe D'Acquisto and Fabio Ricciato</td>
+                            <td>Relativizing the notion of personal data: a proposed framework for data sharing</td>
+                        </tr>
+                        <tr>
+                            <td>Yana Dimova, Tom Van Goethem, Vincent Toubiana, Wouter Joosen and Lieven Desmet</td>
+                            <td>A history of GDPR cookie banner compliance: the roles of publishers, regulators and CMPs</td>
+                        </tr>
+                        <tr>
+                            <td>Vanessa Fiedler and Zoltan Mann</td>
+                            <td>Secure and explainable inference with neural networks</td>
+                        </tr>
+                        <tr>
+                            <td>Henrik Graßhoff, Malte Hansen, Meiko Jensen and Sara Ramezanian</td>
+                            <td>Short Paper: Models in the dark: Rectification and erasure under GDPR in ML supply chains <span class="paper-format-tag">Short paper</span></td>
+                        </tr>
+                        <tr>
+                            <td>Soheil Human</td>
+                            <td>A Rights-First Path to Privacy by Architecture: Proposed Article 88b GDPR and the Case for Advanced Data Protection Control (ADPC) <span class="paper-format-tag">Opinion paper</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sascha Löbner, Eleftherios Eleftheriadis, Jens Lindemann, Hannes Federrath and Kai Rannenberg</td>
+                            <td>Designing Privacy-Preserving Smart Home Intrusion Detection Through User Acceptance Criteria: An Action Design Research Study</td>
+                        </tr>
+                        <tr>
+                            <td>Kristina Magnussen and Rainer Böhme</td>
+                            <td>Personal Data Accuracy is a Blind Spot in LLM Privacy Research - Opinion Paper <span class="paper-format-tag">Opinion paper</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tanel Mällo, Ainika Harro and Liina Kamm</td>
+                            <td>Transparency and Intervenability in Privacy Engineering: From Research Gap to GDPR Challenge</td>
+                        </tr>
+                        <tr>
+                            <td>David Martinez, Eusebi Calle and Dolors Canals Ametller</td>
+                            <td>The Web Tracking Score: A GDPR-Aligned Metric to Benchmark Privacy and Data Protection</td>
+                        </tr>
+                        <tr>
+                            <td>Markus Sullivan</td>
+                            <td>Enforcement, Market Distortion, and the Danger of Reforming Fundamental Rights Under Pressure</td>
+                        </tr>
+                        <tr>
+                            <td>Niklas Zapatka, Moritz Kirschte, Sebastian Meiser, Bud Bruegger, Harald Zwingelberg and Esfandiar Mohammadi</td>
+                            <td>Understanding Differential Privacy in Terms of Crowd Size Preservation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    {% include sidebar.html %}
+</div>
