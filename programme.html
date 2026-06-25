@@ -3,75 +3,429 @@ layout: default
 title: Programme
 ---
 
+{% assign speaker_wojciech = site.data.speakers | where: "image", "wiewiorowski.jpg" | first %}
+{% assign speaker_luca = site.data.speakers | where: "image", "tagliaretti.jpg" | first %}
+{% assign speaker_helmut = site.data.speakers | where: "image", "leopold.jpg" | first %}
+{% assign speaker_matthias = site.data.speakers | where: "image", "schmidl.jpg" | first %}
+{% assign speaker_jelena = site.data.speakers | where: "image", "burnik.png" | first %}
+{% assign speaker_katarzyna = site.data.speakers | where: "image", "prusak.jpg" | first %}
+{% assign speaker_prokopios = site.data.speakers | where: "image", "drogkaris.jpg" | first %}
+{% assign speaker_irene = site.data.speakers | where: "image", "kamara.jpg" | first %}
+{% assign speaker_jan = site.data.speakers | where: "image", "schallaboeck.jpg" | first %}
+
+{% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
+{% capture speaker_luca_link %}<a href="{{ speaker_luca.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_luca.name }}</a>{% endcapture %}
+{% capture speaker_helmut_link %}<a href="{{ speaker_helmut.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_helmut.name }}</a>{% endcapture %}
+{% capture speaker_matthias_link %}<a href="{{ speaker_matthias.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_matthias.name }}</a>{% endcapture %}
+{% capture speaker_jelena_link %}<a href="{{ speaker_jelena.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jelena.name }}</a>{% endcapture %}
+{% capture speaker_katarzyna_link %}<a href="{{ speaker_katarzyna.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_katarzyna.name }}</a>{% endcapture %}
+{% capture speaker_prokopios_link %}<a href="{{ speaker_prokopios.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_prokopios.name }}</a>{% endcapture %}
+{% capture speaker_irene_link %}<a href="{{ speaker_irene.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_irene.name }}</a>{% endcapture %}
+{% capture speaker_jan_link %}<a href="{{ speaker_jan.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jan.name }}</a>{% endcapture %}
+
 <style>
-    table.agenda { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    table.agenda th { background: var(--baltic-blue); color: #fff; padding: 12px; text-align: left; }
-    table.agenda td { border-bottom: 1px solid #eee; padding: 12px; }
-    table.agenda tr:hover { background-color: #f2f2f2; }
-    .time-col { font-weight: bold; color: var(--intense-cherry); width: 120px; }
+    .container > main {
+        min-width: 0;
+    }
+
+    .programme-note {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--intense-cherry);
+        border-radius: 8px;
+        padding: 18px 20px;
+        margin-bottom: 30px;
+    }
+
+    .programme-note h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .programme-note p {
+        margin: 0;
+    }
+
+    .programme-intro {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+        padding: 22px 24px;
+        margin-bottom: 24px;
+    }
+
+    .programme-intro p:last-child {
+        margin-bottom: 0;
+    }
+
+    .event-details {
+        margin: 12px 0 0;
+        padding-left: 20px;
+    }
+
+    .event-details li {
+        margin-bottom: 4px;
+    }
+
+    .programme-day {
+        margin-top: 40px;
+    }
+
+    .programme-day h3 {
+        margin-bottom: 0;
+    }
+
+    .agenda-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+        border: 1px solid var(--border-light);
+        background: var(--white);
+    }
+
+    table.agenda {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+        margin-top: 0;
+        background: var(--white);
+        border: none;
+        font-size: 0.95rem;
+        table-layout: fixed;
+    }
+
+    table.agenda th {
+        background: var(--baltic-blue);
+        color: #fff;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .agenda-time {
+        width: 13%;
+    }
+
+    .agenda-slot {
+        width: 19%;
+    }
+
+    .agenda-title {
+        width: 43%;
+    }
+
+    .agenda-speakers {
+        width: 25%;
+    }
+
+    table.agenda td {
+        border-bottom: 1px solid #eee;
+        padding: 12px;
+        vertical-align: top;
+    }
+
+    table.agenda tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    table.agenda tr:hover {
+        background-color: #f7fafc;
+    }
+
+    .time-col {
+        white-space: nowrap;
+        font-weight: bold;
+        color: var(--intense-cherry);
+    }
+
+    .slot-col {
+        font-weight: bold;
+        color: var(--baltic-blue);
+    }
+
+    .title-col,
+    .speaker-col {
+        overflow-wrap: anywhere;
+    }
+
+    .session-break {
+        color: #555;
+        font-weight: 600;
+    }
+
+    .session-speakers {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .session-speakers li + li {
+        margin-top: 2px;
+    }
+
+    .session-detail {
+        display: block;
+        margin-top: 6px;
+    }
+
+    .speaker-col > .session-detail:first-child {
+        margin-top: 0;
+    }
+
+    .session-detail + .session-speakers {
+        margin-top: 4px;
+    }
+
+    @media (max-width: 700px) {
+        .agenda-scroll {
+            -webkit-overflow-scrolling: touch;
+        }
+    }
 </style>
 
 <div class="container">
     <main>
         <section class="hero">
             <h2>Conference Programme</h2>
-            <p>The draft program below. </p>
+            <p>The current draft programme is listed below.</p>
+        </section>
+
+        <section class="programme-intro">
+            <p>The APF program comprises consciously curated invited talks and keynotes by outstanding authority representatives, practitioners, researchers and other privacy stakeholders, complemented by presentations of scientific papers carefully selected by the PC and one legislation-oriented panel. Of the selected scientific papers, the program foresees 30 minutes for full and 20 minutes for short papers.</p>
+            <p>Together, these contributions provide comprehensive and multifaceted perspectives to this year’s theme <strong>“Ten Years of GDPR – Engineering the Future”</strong>. Contributions originate from – inter alia – law, technology, and social sciences, together stipulating the unique inter- and transdisciplinary exchange and discourse that APF is specifically known for.</p>
+            <p>The program is continuously being refined and completed, particularly with updated talk titles.</p>
+        </section>
+
+        <section class="programme-note">
+            <h3>Opening Event</h3>
+            <p>On the evening of September 8 – thus closing the traditional pre-APF IPEN event organized by the European Data Protection Supervisor, and at the same time welcoming all APF participants – the city of Salzburg and state of Salzburg jointly invite to a <strong>fine classical concert in the stunning marble hall (“Marmorsaal”) of Mirabell Castle.</strong> Drinks and small snacks will presumably be available to buy before the concert.</p>
+            <ul class="event-details">
+                <li><strong>When:</strong> September 8, 18:00 – 19:00</li>
+                <li><strong>Where:</strong> <a href="https://www.openstreetmap.org/search?query=Mirabell%20Castle%20Marmorsaal%20Salzburg" target="_blank" rel="noopener noreferrer">Mirabell Castle, Marmorsaal</a></li>
+                <li><strong>How to get there:</strong> Organized walk from conference location or individual arrival</li>
+                <li><strong>Sponsored by:</strong> City of Salzburg and state of Salzburg</li>
+            </ul>
         </section>
 
         <section>
-            <i>to follow </i>
+            <h3>Day 1 - Wednesday, 9 September 2026</h3>
+            <div class="agenda-scroll">
+                <table class="agenda">
+                    <colgroup>
+                        <col class="agenda-time">
+                        <col class="agenda-slot">
+                        <col class="agenda-title">
+                        <col class="agenda-speakers">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Slot Type</th>
+                            <th>Title</th>
+                            <th>Speaker(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">08:00-09:00</td>
+                            <td class="slot-col session-break">Registration - Welcome Coffee</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">09:00-10:00</td>
+                            <td class="slot-col">Opening Remarks and Keynote</td>
+                            <td class="title-col">tbc</td>
+                            <td class="speaker-col">
+                                <ul class="session-speakers">
+                                    <li>{{ speaker_wojciech_link }}</li>
+                                    <li>{{ speaker_luca_link }}</li>
+                                    <li>Tbc.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:00-11:00</td>
+                            <td class="slot-col">Paper Session I</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:00-11:30</td>
+                            <td class="slot-col session-break">Coffee Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:30-12:30</td>
+                            <td class="slot-col">Keynote</td>
+                            <td class="title-col">tbc</td>
+                            <td>{{ speaker_helmut_link }}</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:30-13:30</td>
+                            <td class="slot-col session-break">Lunch Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">13:30-14:15</td>
+                            <td class="slot-col">Invited Talk</td>
+                            <td class="title-col">tbc</td>
+                            <td>{{ speaker_matthias_link }}</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">14:15-15:45</td>
+                            <td class="slot-col">Paper Session II</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:45-16:15</td>
+                            <td class="slot-col session-break">Coffee Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:00-17:20</td>
+                            <td class="slot-col">Paper Session III</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">17:20-18:00</td>
+                            <td class="slot-col">Invited Talk</td>
+                            <td class="title-col">tbc</td>
+                            <td>Marit Hansen</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">18:30</td>
+                            <td class="slot-col session-break">Social Event tbc.</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
-        <!--
-            <section>
-                <h3>Day 1: September 9, 2026</h3>
-                <p><em>Workshops and Opening Reception</em></p>
-                <table class="agenda">
-                    <tr>
-                        <td class="time-col">09:00 - 12:00</td>
-                        <td><strong>Pre-Conference Workshops</strong><br>Topic: Privacy Engineering in Practice</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">13:00 - 17:00</td>
-                        <td><strong>Ph.D. Students</strong><br>Sessions for student papers.</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">18:00</td>
-                        <td><strong>Welcome Reception</strong><br>Location: Salzburg</td>
-                    </tr>
-                </table>
-            </section>
 
-            <section style="margin-top: 40px;">
-                <h3>Day 2: September 10, 2026</h3>
-                <p><em>Main Conference</em></p>
+
+        <section class="programme-day">
+            <h3>Day 2 - Thursday, 10 September 2026</h3>
+            <div class="agenda-scroll">
                 <table class="agenda">
-                    <tr>
-                        <td class="time-col">09:00 - 09:30</td>
-                        <td><strong>Opening Keynote</strong><br>Speaker: TBA</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">09:30 - 11:00</td>
-                        <td><strong>Session 1: Law, Policy & Strategy</strong><br>Paper presentations (3 slots)</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">11:00 - 11:30</td>
-                        <td><em>Coffee Break</em></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">11:30 - 13:00</td>
-                        <td><strong>Session 2: Engineering & Technology</strong><br>Paper presentations (3 slots)</td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">13:00 - 14:00</td>
-                        <td><em>Lunch Break</em></td>
-                    </tr>
-                    <tr>
-                        <td class="time-col">19:30</td>
-                        <td><strong>Dinner</strong></td>
-                    </tr>
+                    <colgroup>
+                        <col class="agenda-time">
+                        <col class="agenda-slot">
+                        <col class="agenda-title">
+                        <col class="agenda-speakers">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Slot Type</th>
+                            <th>Title</th>
+                            <th>Speaker(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">08:30-09:00</td>
+                            <td class="slot-col"></td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">09:00-10:00</td>
+                            <td class="slot-col">Paper Session IV</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:00-11:00</td>
+                            <td class="slot-col">Keynote</td>
+                            <td class="title-col">tbc</td>
+                            <td>tbc</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:00-11:30</td>
+                            <td class="slot-col session-break">Coffee Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:30-12:30</td>
+                            <td class="slot-col">Panel</td>
+                            <td class="title-col"><strong>Facilitating breach and incident reporting</strong></td>
+                            <td class="speaker-col">
+                                <span class="session-detail"><strong>Moderator:</strong> {{ speaker_prokopios_link }}</span>
+                                <ul class="session-speakers">
+                                    <li>{{ speaker_jelena_link }}</li>
+                                    <li>{{ speaker_katarzyna_link }}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:30-13:30</td>
+                            <td class="slot-col session-break">Lunch Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col" rowspan="2">13:30-14:30</td>
+                            <td class="slot-col" rowspan="2">Invited Talks</td>
+                            <td class="title-col">
+                                <strong>Secure Processing Environments: Joint report from the Hellenic and Spanish Data Protection Authorities</strong>
+                            </td>
+                            <td class="speaker-col">
+                                <span class="session-detail">Konstantinos Limniotis</span>
+                                <span class="session-detail">Teresa Martinez</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title-col">
+                                <strong>ISO/IEC JTC 1/SC 44 Consumer protection in the field of privacy by design</strong>
+                            </td>
+                            <td class="speaker-col">
+                                {{ speaker_jan_link }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">14:30-15:30</td>
+                            <td class="slot-col">Paper Session V</td>
+                            <td class="title-col">2 full papers</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">15:30-16:00</td>
+                            <td class="slot-col session-break">Coffee Break</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:00-16:30</td>
+                            <td class="slot-col">Invited Talk</td>
+                            <td class="title-col">tbc</td>
+                            <td>{{ speaker_irene_link }}</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:30-17:00</td>
+                            <td class="slot-col session-break">Closing Remarks</td>
+                            <td class="title-col"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
                 </table>
-            </section>
-            -->
+            </div>
+        </section>
+
+        <section class="programme-intro programme-day">
+            <h3>Social Programme</h3>
+            <p>In addition to the technical program, APF 2026 also comprises agenda items dedicated to celebrating Salzburg’s rich and world-renowned cultural heritage, socializing, and networking in mind-stimulating environments:</p>
+            <ul>
+                <li>Opening Event: Classical Concert</li>
+                <li>Social Event: tbc</li>
+            </ul>
+        </section>
         </main>
 
     <aside>
@@ -80,12 +434,6 @@ title: Programme
             <p>The full PDF programme will be available for download here closer to the event. </p>
             <a href="#" class="btn" style="background:#ccc; cursor:not-allowed;">Download PDF </a>
         </div>
-        
-        <div class="sidebar-box">
-            <h3>Keynote Speakers</h3>
-            <p>To be announced. </p>
-        </div>
-        
         {% include sidebar.html %}
     </aside>
 </div>

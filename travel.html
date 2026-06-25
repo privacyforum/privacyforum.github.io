@@ -1,0 +1,94 @@
+---
+layout: default
+title: Travel
+---
+
+<style>
+    .travel-card {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--baltic-blue);
+        border-radius: 8px;
+        padding: 20px 22px;
+        margin: 24px 0;
+    }
+
+    .travel-card h4:first-child {
+        margin-top: 0;
+    }
+
+    .attendance-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .attendance-links li {
+        border-top: 1px solid var(--border-light);
+        padding: 8px 0;
+    }
+
+    .attendance-links li:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+</style>
+
+<div class="container">
+    <main>
+        <section class="hero">
+            <h2>Travel</h2>
+            <p>Information for reaching Salzburg and the APF 2026 venue.</p>
+        </section>
+
+        <section>
+            <h3>Reaching Salzburg</h3>
+            <p>Salzburg is located in the heart of Europe and is easily reachable by train, long-distance bus and airplane. While Salzburg has many direct connections, you can also travel via Vienna or Munich.</p>
+
+            <div class="travel-card">
+                <h4>Access by Train</h4>
+                <p>Salzburg main station is well connected to European neighbors. Moreover, it is both part of the Austrian train network and endpoint of the German train network. Therefore, it is reachable with the <strong>Klimaticket</strong>, <strong>Deutschlandticket</strong> or <strong>Bahncard 100</strong> free of charge.</p>
+                <p>Check prices with the Austrian train providers <a href="https://fahrplan.oebb.at/webapp/#!P|TP!H|473083" target="_blank" rel="noopener noreferrer">ÖBB</a> and <a href="https://westbahn.at/en/" target="_blank" rel="noopener noreferrer">Westbahn</a>, as well as the German train provider <a href="https://www.bahn.de/" target="_blank" rel="noopener noreferrer">DB</a>.</p>
+
+                <h4>Access by Long-Distance Bus</h4>
+                <p>Salzburg is also part of the <a href="https://www.flixbus.at/fernbus/salzburg" target="_blank" rel="noopener noreferrer">FlixBus</a> network, for example with direct connections to:</p>
+                <ul>
+                    <li>Czech Republic, e.g. Prague</li>
+                    <li>Germany, e.g. Munich, Berlin, Flensburg</li>
+                    <li>Hungary, e.g. Budapest</li>
+                    <li>Netherlands, e.g. Amsterdam</li>
+                    <li>Slovenia, e.g. Ljubljana</li>
+                </ul>
+
+                <h4>Access by Airplane</h4>
+                <p>Salzburg has its own <a href="https://www.salzburg-airport.com/en/" target="_blank" rel="noopener noreferrer">airport</a> with several flights to European capitals.</p>
+                <p>Moreover, as Salzburg is easily reachable via train from both Vienna and Munich, you can often find convenient connections via VIE or MUC.</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <h3>Access to the Venue</h3>
+            <p>The conference venue, <a href="{{ '/venue.html' | relative_url }}">Unipark Nonntal</a>, is close to the city center. It can be reached by foot, about a 5 minute walk from Salzburg Cathedral, or with public transport via the bus stop Justizgebäude.</p>
+
+            <div class="travel-card">
+                <h4>Mobility in Salzburg</h4>
+                <p>Within Salzburg, the <a href="https://www.guestmobilityticket.at/en/" target="_blank" rel="noopener noreferrer">guest mobility ticket</a> is granted for all overnight guests and gives access to public transport within the entire province of Salzburg.</p>
+                <p>The ticket allows travel on city and regional buses, suburban trains, regional and long-distance trains, as well as micro public transport connections, ensuring sustainable, stress-free mobility within Salzburg.</p>
+                <p>The ticket is financed by a mobility charge of 0.50&nbsp;&euro; per night. The contribution is added to the accommodation tax, and the revenues are earmarked for public transport.</p>
+            </div>
+        </section>
+    </main>
+
+    <aside>
+        <div class="sidebar-box">
+            <h3>Attendance</h3>
+            <ul class="attendance-links">
+                <li><a href="{{ '/venue.html' | relative_url }}">Venue</a></li>
+                <li><a href="{{ '/hotel_booking.html' | relative_url }}">Hotel Booking</a></li>
+                <li><a href="{{ '/travel.html' | relative_url }}">Travel</a></li>
+            </ul>
+        </div>
+
+        {% include sidebar.html %}
+    </aside>
+</div>

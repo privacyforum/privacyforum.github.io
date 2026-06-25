@@ -3,64 +3,77 @@ layout: default
 title: Venue
 ---
 
+<style>
+    .venue-card {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--baltic-blue);
+        border-radius: 8px;
+        padding: 20px 22px;
+        margin: 24px 0;
+    }
+
+    .venue-address {
+        font-size: 1.05rem;
+        margin-bottom: 18px;
+    }
+
+    .attendance-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .attendance-links li {
+        border-top: 1px solid var(--border-light);
+        padding: 8px 0;
+    }
+
+    .attendance-links li:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+</style>
+
 <div class="container">
     <main>
         <section class="hero">
-            <h2>Salzburg, Austria</h2>
-            <p>The APF 2026 will be hosted at the <strong>University of Salzburg</strong>.</p>
-
-            <p>Unipark Nonntal <br>
-            Erzabt-Klotz-Straße 1<br>
-            5020 Salzburg </p>
+            <h2>Venue</h2>
+            <p>APF 2026 will be hosted at <strong>Unipark Nonntal</strong>, one of the University of Salzburg's largest and most modern buildings.</p>
         </section>
-        
+
         <section>
-        <h3>Reaching Salzburg</h3>
-        Salzburg is located in the heart of Europe. Therefore, it is easily reachable by train, long distance bus and airplane.
-        While Salzburg has a lot of direct connections, you can also travel via Vienna or Munich (Germany).
+            <h3>Unipark Nonntal</h3>
+            <p>Located close to the historic old town and at the foot of the famous Hohensalzburg fortress, Unipark Nonntal combines state-of-the-art event facilities with, depending on the weather, stunning rooftop views to historic buildings as well as the nearby countryside and mountains.</p>
+            <p>Most famous points of interest as well as hotels or a relaxing break by the Salzach river are also just a quick walk or a few bus stations away.</p>
 
-        <div style="background: #fff; padding: 20px; border: 1px solid #eee; border-left: 4px solid var(--baltic-blue); border-radius: 4px; margin-top: 20px;">
-        <h4>Access by Train</h4>
-        <p>
-            Salzburg main station is well-connected to the European neighbors. 
-            Moreover, it is both part of the Austrian train network and endpoint of the German train network. Therefore, it is reachable with the <strong>Klimaticket</strong>, <strong>Deutschlandticket</strong> or <strong>Bahncard 100</strong> free of charge. 
-            Check prices both with the Austrian train providers <a href="https://fahrplan.oebb.at/webapp/#!P|TP!H|473083" target="_blank">ÖBB</a>, <a href="https://westbahn.at/en/" target="_blank">Westbahn</a> and the German train provider <a href="https://www.bahn.de/" target="_blank">DB</a>!
-        </p>
-        
-        <h4>Access by Long-Distance Bus</h4>
-        <p>
-            Salzburg is also part of the <a href="https://www.flixbus.at/fernbus/salzburg" target="_blank">Flixbus</a> network, for example with direct connections to:
-            <ul>
-                <li>Czech Republic (e.g., Prague)</li>
-                <li>Germany (e.g., Munich, Berlin, Flensburg)</li>
-                <li>Hungary (e.g., Budapest)</li>
-                <li>Netherlands (e.g., Amsterdam)</li>
-                <li>Slovenia (e.g., Ljubljana)</li>
-            </ul>
-        </p>
-        
-        <h4>Access by Airplane</h4>
-        <p>Salzburg has it's own <a href="https://www.salzburg-airport.com/en/" target="_blank">Airport</a> with several flights to European capitals.</p>
-        <p>Moreover, as Salzburg is easily reachable via train from both Vienna and Munich, you can often find cheap connections via VIE or MUC.</p> 
-        </div>
-        </section>
+            <div class="venue-card">
+                <h3>Conference Areas</h3>
+                <p>APF will take place at the ground level for registration and the main hall, the basement for meals and coffee breaks, and presumably the rooftop terrace of the building.</p>
+                <p>For simpler orientation, the university provides an interactive 360 degree tour of the building <a href="https://www.plus.ac.at/studium/waehrend-dem-studium/virtuelle-rundgaenge/virtueller-rundgang-unipark/">here</a>.</p>
+            </div>
 
-        <section style="margin-top: 40px;">
-        <h3>Access to the Venue</h3>
-        <p>
-            The conference venue (Unipark Nonntal) is close to the city center.
-            It can be reached by foot (5 min walk from the Salzburg Cathedral) or with public transport (bus stop: Justizgebäude).
-        </p>    
-        <div style="background: #fff; padding: 20px; border: 1px solid #eee; border-left: 4px solid var(--baltic-blue); border-radius: 4px; margin-top: 20px;">
-        <h4>Mobility in Salzburg</h4>
-        <p>
-            Within Salzburg, the <a href="https://www.guestmobilityticket.at/en/" target="_blank">guest mobility ticket</a> is granted for all overnight guests and gives you access to public transport within the entire province of Salzburg. 
-            The ticket allows travel on city and regional buses, suburban trains, regional and long distance trains, as well as micro public transport connections, ensuring sustainable, stress free mobility within Salzburg.
-            The ticket is financed by a mobility charge of € 0.50 per night. The contribution is added to the accommodation tax, and the revenues are earmarked for public transport.
-        </p>   
-        </div>
+            <div class="venue-card">
+                <h3>Address</h3>
+                <p class="venue-address"><strong>Unipark Nonntal</strong><br>
+                Erzabt-Klotz-Straße 1<br>
+                5020 Salzburg<br>
+                Austria</p>
+                <p><a class="btn" href="https://www.openstreetmap.org/search?query=Erzabt-Klotz-Stra%C3%9Fe%201%2C%205020%20Salzburg" target="_blank" rel="noopener noreferrer">Open map and directions</a></p>
+            </div>
         </section>
     </main>
 
-    {% include sidebar.html %}
+    <aside>
+        <div class="sidebar-box">
+            <h3>Attendance</h3>
+            <ul class="attendance-links">
+                <li><a href="{{ '/venue.html' | relative_url }}">Venue</a></li>
+                <li><a href="{{ '/hotel_booking.html' | relative_url }}">Hotel Booking</a></li>
+                <li><a href="{{ '/travel.html' | relative_url }}">Travel</a></li>
+            </ul>
+        </div>
+
+        {% include sidebar.html %}
+    </aside>
 </div>

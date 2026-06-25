@@ -28,6 +28,11 @@
   image: "burnik.png"
   webpage: "https://www.ip-rs.si/en/about/information-commissioner"
   featured: True
+- name: "Prokopios Drogkaris"
+  affiliation: "ENISA"
+  image: "drogkaris.jpg"
+  webpage: "https://www.linkedin.com/in/pdrogk/"
+  featured: True
 - name: "Irene Kamara"
   affiliation: "Tilburg University"
   image: "kamara.jpg"
@@ -52,9 +57,4 @@
   affiliation: " Future of Privacy Forum"
   image: "noPicture.png"
   webpage: "https://fpf.org/person/andreea-serban/"
-  featured: True
-- name: "Prokopios Drogkaris"
-  affiliation: "ENISA"
-  image: "drogkaris.jpg"
-  webpage: "https://www.linkedin.com/in/pdrogk/"
   featured: True

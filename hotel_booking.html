@@ -1,0 +1,70 @@
+---
+layout: default
+title: Hotel Booking
+---
+
+<style>
+    .booking-card {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--baltic-blue);
+        border-radius: 8px;
+        padding: 22px 24px;
+        margin: 24px 0;
+    }
+
+    .booking-card h3 {
+        margin-top: 0;
+    }
+
+    .attendance-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .attendance-links li {
+        border-top: 1px solid var(--border-light);
+        padding: 8px 0;
+    }
+
+    .attendance-links li:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+</style>
+
+<div class="container">
+    <main>
+        <section class="hero">
+            <h2>Hotel Booking</h2>
+            <p>Accommodation information for APF 2026 participants.</p>
+        </section>
+
+        <section>
+            <p>Salzburg offers a broad variety of hotels across price ranges from down to earth to fine residence. Even though APF was carefully planned to not overlap with major events such as the classical Festspielzeit, rooms might nonetheless get pricey quite soon, especially for hotels close to the popular old town and the river Salzach.</p>
+
+            <div class="booking-card">
+                <h3>Discounted Hotel Contingent</h3>
+                <p>We therefore teamed up with Salzburg's local congress management organization Salzburg Congress to provide a contingent of discounted rooms from a list of hotels consciously curated for APF attendance.</p>
+                <p>Bookings from this contingent can be made via the Salzburg Congress booking page.</p>
+                <p><a class="btn" href="https://www.salzburgcongress.at/en/Quickfinder-TOSC5/2026/qf-scprivacy-en" target="_blank" rel="noopener noreferrer">Book via Salzburg Congress</a></p>
+            </div>
+
+            <p>Alternatively, you may also look for hotels close to the <a href="{{ '/venue.html' | relative_url }}">conference venue</a> yourself. In case of further questions, just get in touch via the <a href="{{ '/contact.html' | relative_url }}">contact page</a>.</p>
+        </section>
+    </main>
+
+    <aside>
+        <div class="sidebar-box">
+            <h3>Attendance</h3>
+            <ul class="attendance-links">
+                <li><a href="{{ '/venue.html' | relative_url }}">Venue</a></li>
+                <li><a href="{{ '/hotel_booking.html' | relative_url }}">Hotel Booking</a></li>
+                <li><a href="{{ '/travel.html' | relative_url }}">Travel</a></li>
+            </ul>
+        </div>
+
+        {% include sidebar.html %}
+    </aside>
+</div>
