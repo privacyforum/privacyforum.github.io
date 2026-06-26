@@ -58,3 +58,8 @@
   image: "noPicture.png"
   webpage: "https://fpf.org/person/andreea-serban/"
   featured: True
+- name: "Marit Hansen"
+  affiliation: "ULD"
+  image: "hansen.jpg"
+  webpage: "https://hansen-kronshagen.de/marit/en/"
+  featured: True

@@ -13,6 +13,7 @@ title: Programme
 {% assign speaker_irene = site.data.speakers | where: "image", "kamara.jpg" | first %}
 {% assign speaker_jan = site.data.speakers | where: "image", "schallaboeck.jpg" | first %}
 {% assign speaker_konstantinos = site.data.speakers | where: "image", "limniotis.jpg" | first %}
+{% assign speaker_marit = site.data.speakers | where: "image", "hansen.jpg" | first %}
 
 {% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
 {% capture speaker_luca_link %}<a href="{{ speaker_luca.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_luca.name }}</a>{% endcapture %}
@@ -24,6 +25,7 @@ title: Programme
 {% capture speaker_irene_link %}<a href="{{ speaker_irene.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_irene.name }}</a>{% endcapture %}
 {% capture speaker_jan_link %}<a href="{{ speaker_jan.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jan.name }}</a>{% endcapture %}
 {% capture speaker_konstantinos_link %}<a href="{{ speaker_konstantinos.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_konstantinos.name }}</a>{% endcapture %}
+{% capture speaker_marit_link %}<a href="{{ speaker_marit.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_marit.name }}</a>{% endcapture %}
 <style>
     .container > main {
         min-width: 0;
@@ -293,7 +295,7 @@ title: Programme
                             <td class="time-col">17:20-18:00</td>
                             <td class="slot-col">Invited Talk</td>
                             <td class="title-col">tbc</td>
-                            <td>Marit Hansen</td>
+                            <td>{{ speaker_marit_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">18:30</td>
