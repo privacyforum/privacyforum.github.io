@@ -8,15 +8,15 @@
   image: "leschke.jpg"
   webpage: "https://pepsys-group.github.io/team/nl"
   featured: true
-- name: "Kai Rannenberg"
-  affiliation: "Goethe University Frankfurt"
-  image: "rannenberg.jpg"
-  webpage: "https://www.m-chair.de/team?view=article&id=30:prof-dr-kai-rannenberg"
-  featured: true
 - name: "Narges Arastouei"
   affiliation: "Goethe University Frankfurt"
   image: "narges.jpg"
   webpage: "https://www.m-chair.de/team?view=article&id=33:dr-narges-arastouei"
+  featured: true
+- name: "Kai Rannenberg"
+  affiliation: "Goethe University Frankfurt"
+  image: "rannenberg.jpg"
+  webpage: "https://www.m-chair.de/team?view=article&id=30:prof-dr-kai-rannenberg"
   featured: true
 - name: "Mahdi Akil"
   affiliation: "University of Salzburg"
