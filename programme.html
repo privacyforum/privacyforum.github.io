@@ -12,7 +12,8 @@ title: Programme
 {% assign speaker_prokopios = site.data.speakers | where: "image", "drogkaris.jpg" | first %}
 {% assign speaker_irene = site.data.speakers | where: "image", "kamara.jpg" | first %}
 {% assign speaker_jan = site.data.speakers | where: "image", "schallaboeck.jpg" | first %}
-{% assign speaker_konstantinos = site.data.speakers | where: "image", "limniotis.jpg" | first %}
+{% assign speaker_konstantinos = site.data.speakers | where: "image", "limniotis.png" | first %}
+{% assign speaker_dina = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Dina Kampouraki" | first %}
 {% assign speaker_marit = site.data.speakers | where: "image", "hansen.jpg" | first %}
 
 {% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
@@ -25,6 +26,7 @@ title: Programme
 {% capture speaker_irene_link %}<a href="{{ speaker_irene.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_irene.name }}</a>{% endcapture %}
 {% capture speaker_jan_link %}<a href="{{ speaker_jan.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_jan.name }}</a>{% endcapture %}
 {% capture speaker_konstantinos_link %}<a href="{{ speaker_konstantinos.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_konstantinos.name }}</a>{% endcapture %}
+{% capture speaker_dina_link %}<a href="{{ speaker_dina.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_dina.name }}</a>{% endcapture %}
 {% capture speaker_marit_link %}<a href="{{ speaker_marit.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_marit.name }}</a>{% endcapture %}
 <style>
     .container > main {
@@ -361,6 +363,7 @@ title: Programme
                                 <ul class="session-speakers">
                                     <li>{{ speaker_jelena_link }}</li>
                                     <li>{{ speaker_katarzyna_link }}</li>
+                                    <li>{{ speaker_dina_link }}</li>
                                 </ul>
                             </td>
                         </tr>
