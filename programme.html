@@ -15,6 +15,7 @@ title: Programme
 {% assign speaker_konstantinos = site.data.speakers | where: "image", "limniotis.png" | first %}
 {% assign speaker_dina = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Dina Kampouraki" | first %}
 {% assign speaker_marit = site.data.speakers | where: "image", "hansen.jpg" | first %}
+{% assign speaker_max = site.data.speakers | where: "image", "MaxSchrems.jpg" | first %}
 {% assign organizer_frank = site.data.organizers | where: "image", "pallas.png" | first %}
 
 {% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
@@ -29,6 +30,7 @@ title: Programme
 {% capture speaker_konstantinos_link %}<a href="{{ speaker_konstantinos.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_konstantinos.name }}</a>{% endcapture %}
 {% capture speaker_dina_link %}<a href="{{ speaker_dina.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_dina.name }}</a>{% endcapture %}
 {% capture speaker_marit_link %}<a href="{{ speaker_marit.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_marit.name }}</a>{% endcapture %}
+{% capture speaker_max_link %}<a href="{{ speaker_max.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_max.name }}</a>{% endcapture %}
 {% capture organizer_frank_link %}<a href="{{ organizer_frank.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_frank.name }}</a>{% endcapture %}
 <style>
     .container > main {
@@ -347,8 +349,8 @@ title: Programme
                         <tr>
                             <td class="time-col">10:00-11:00</td>
                             <td class="slot-col">Keynote</td>
-                            <td class="title-col">tbc</td>
-                            <td>tbc</td>
+                            <td class="title-col">tbd</td>
+                            <td>{{ speaker_max_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">11:00-11:30</td>
