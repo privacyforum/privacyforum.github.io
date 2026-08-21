@@ -68,3 +68,8 @@
   image: "MaxSchrems.jpg"
   webpage: "https://noyb.eu/en/max-schrems"
   featured: True
+- name: "Teresa Martinez"
+  affiliation: "Agencia Española de Protección de Datos"
+  image: "noPicture.png"
+  webpage: "https://www.aepd.es/"
+  featured: True
