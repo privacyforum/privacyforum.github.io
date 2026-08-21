@@ -64,7 +64,7 @@ title: Home
                     {% if person.webpage %}
                     <a href="{{ person.webpage }}" target="_blank" rel="noopener noreferrer">
                         {% endif %}
-                        <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}">
+                        <img src="{{ '/images/' | append: person.image | relative_url }}" alt="{{ person.name }}"{% if person.image == "MaxSchrems.jpg" %} style="object-position:center 12%;"{% endif %}>
                         <strong>{{ person.name }}</strong>
                         <span>{{ person.affiliation }}</span>
                         {% if person.webpage %}

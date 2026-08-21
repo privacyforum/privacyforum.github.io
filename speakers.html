@@ -15,7 +15,7 @@ title: Speakers
                 {% if speaker.webpage and speaker.webpage != "#" %}
                 <a href="{{ speaker.webpage }}" target="_blank" rel="noopener noreferrer">
                 {% endif %}
-                <img src="{{ '/images/' | append: speaker.image | relative_url }}" alt="{{ speaker.name }}">
+                <img src="{{ '/images/' | append: speaker.image | relative_url }}" alt="{{ speaker.name }}"{% if speaker.image == "MaxSchrems.jpg" %} style="object-position:center 12%;"{% endif %}>
                 <strong>{{ speaker.name }}</strong>
                 <span>{{ speaker.affiliation }}</span>
                 {% if speaker.webpage and speaker.webpage != "#" %}
