@@ -17,6 +17,7 @@ title: Programme
 {% assign speaker_marit = site.data.speakers | where: "image", "hansen.jpg" | first %}
 {% assign speaker_max = site.data.speakers | where: "image", "MaxSchrems.jpg" | first %}
 {% assign speaker_teresa = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Teresa Martinez" | first %}
+{% assign speaker_andreea = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Andreea Șerban" | first %}
 {% assign organizer_frank = site.data.organizers | where: "image", "pallas.png" | first %}
 
 {% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
@@ -33,6 +34,7 @@ title: Programme
 {% capture speaker_marit_link %}<a href="{{ speaker_marit.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_marit.name }}</a>{% endcapture %}
 {% capture speaker_max_link %}<a href="{{ speaker_max.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_max.name }}</a>{% endcapture %}
 {% capture speaker_teresa_link %}<a href="{{ speaker_teresa.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_teresa.name }}</a>{% endcapture %}
+{% capture speaker_andreea_link %}<a href="{{ speaker_andreea.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_andreea.name }}</a>{% endcapture %}
 {% capture organizer_frank_link %}<a href="{{ organizer_frank.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_frank.name }}</a>{% endcapture %}
 <style>
     .container > main {
@@ -370,6 +372,7 @@ title: Programme
                                     <li>{{ speaker_jelena_link }}</li>
                                     <li>{{ speaker_katarzyna_link }}</li>
                                     <li>{{ speaker_dina_link }}</li>
+                                    <li>{{ speaker_andreea_link }}</li>
                                 </ul>
                             </td>
                         </tr>

@@ -3,43 +3,58 @@
   image: "wiewiorowski.jpg"
   webpage: "https://www.edps.europa.eu/about-edps/members-mission/supervisors/wojciech-wiewi%C3%B3rowski_en"
   featured: True
-- name: "Matthias Schmidl"
-  affiliation: "Austrian Data Protection Authority"
-  image: "schmidl.jpg"
-  webpage: "https://data-protection-authority.gv.at/"
-  featured: True
 - name: "Luca Tagliaretti"
   affiliation: "ECCC"
   image: "tagliaretti.jpg"
   webpage: "https://cybersecurity-centre.europa.eu/news/luca-tagliaretti-elected-new-executive-director-eu-cybersecurity-competence-centre-2023-10-13_en"
+  featured: True
+- name: "Max Schrems"
+  affiliation: "noyb"
+  image: "MaxSchrems.jpg"
+  webpage: "https://noyb.eu/en/max-schrems"
   featured: True
 - name: "Helmut Leopold"
   affiliation: "Austrian Institute of Technology"
   image: "leopold.jpg"
   webpage: "https://publications.ait.ac.at/en/persons/helmut.leopold"
   featured: True
-- name: "Katarzyna Prusak-Gorniak"
-  affiliation: "ECCC"
-  image: "prusak.jpg"
-  webpage: "https://cerre.eu/biographies/katarzyna-prusak-gorniak/"
-  featured: True
-- name: "Jelena Virant Burnik"
-  affiliation: "Information Commissioner of the Republic of Slovenia"
-  image: "burnik.png"
-  webpage: "https://www.ip-rs.si/en/about/information-commissioner"
+- name: "Marit Hansen"
+  affiliation: "ULD"
+  image: "hansen.jpg"
+  webpage: "https://hansen-kronshagen.de/marit/en/"
   featured: True
 - name: "Prokopios Drogkaris"
   affiliation: "ENISA"
   image: "drogkaris.jpg"
   webpage: "https://www.linkedin.com/in/pdrogk/"
   featured: True
-- name: "Irene Kamara"
-  affiliation: "Tilburg University"
-  image: "kamara.jpg"
-  webpage: "https://www.tilburguniversity.edu/staff/i-kamara"
+- name: "Dina Kampouraki"
+  affiliation: " EDPS"
+  image: "noPicture.png"
+  webpage: "https://www.linkedin.com/in/dina-kampouraki-5a463640/"
+  featured: True
+- name: "Katarzyna Prusak-Gorniak"
+  affiliation: "ECCC"
+  image: "prusak.jpg"
+  webpage: "https://cerre.eu/biographies/katarzyna-prusak-gorniak/"
+  featured: True
+- name: "Andreea Șerban"
+  affiliation: " Future of Privacy Forum"
+  image: "noPicture.png"
+  webpage: "https://fpf.org/person/andreea-serban/"
+  featured: True
+- name: "Jelena Virant Burnik"
+  affiliation: "Information Commissioner of the Republic of Slovenia"
+  image: "burnik.png"
+  webpage: "https://www.ip-rs.si/en/about/information-commissioner"
+  featured: True
+- name: "Matthias Schmidl"
+  affiliation: "Austrian Data Protection Authority"
+  image: "schmidl.jpg"
+  webpage: "https://data-protection-authority.gv.at/"
   featured: True
 - name: "Jan Schallaböck"
-  affiliation: " iRights law,"
+  affiliation: "iRights law"
   image: "schallaboeck.jpg"
   webpage: "https://irights-law.de/team/jan-schallaboeck/"
   featured: True
@@ -48,28 +63,13 @@
   image: "limniotis.png"
   webpage: "https://cgi.di.uoa.gr/~klimn/"
   featured: True
-- name: "Dina Kampouraki"
-  affiliation: " EDPS"
-  image: "noPicture.png"
-  webpage: "https://www.linkedin.com/in/dina-kampouraki-5a463640/"
-  featured: True
-- name: "Andreea Șerban"
-  affiliation: " Future of Privacy Forum"
-  image: "noPicture.png"
-  webpage: "https://fpf.org/person/andreea-serban/"
-  featured: True
-- name: "Marit Hansen"
-  affiliation: "ULD"
-  image: "hansen.jpg"
-  webpage: "https://hansen-kronshagen.de/marit/en/"
-  featured: True
-- name: "Max Schrems"
-  affiliation: "noyb"
-  image: "MaxSchrems.jpg"
-  webpage: "https://noyb.eu/en/max-schrems"
-  featured: True
 - name: "Teresa Martinez"
   affiliation: "Agencia Española de Protección de Datos"
   image: "noPicture.png"
   webpage: "https://www.aepd.es/"
+  featured: True
+- name: "Irene Kamara"
+  affiliation: "Tilburg University"
+  image: "kamara.jpg"
+  webpage: "https://www.tilburguniversity.edu/staff/i-kamara"
   featured: True
