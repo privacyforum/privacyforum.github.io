@@ -63,3 +63,8 @@
   image: "hansen.jpg"
   webpage: "https://hansen-kronshagen.de/marit/en/"
   featured: True
+- name: "Max Schrems"
+  affiliation: "noyb"
+  image: "MaxSchrems.jpg"
+  webpage: "https://noyb.eu/en/max-schrems"
+  featured: True
