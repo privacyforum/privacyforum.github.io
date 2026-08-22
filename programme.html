@@ -19,6 +19,11 @@ title: Programme
 {% assign speaker_teresa = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Teresa Martinez" | first %}
 {% assign speaker_andreea = site.data.speakers | where: "image", "noPicture.png" | where: "name", "Andreea Șerban" | first %}
 {% assign organizer_frank = site.data.organizers | where: "image", "pallas.png" | first %}
+{% assign organizer_nicola = site.data.organizers | where: "name", "Nicola Leschke" | first %}
+{% assign organizer_narges = site.data.organizers | where: "name", "Narges Arastouei" | first %}
+{% assign organizer_kai = site.data.organizers | where: "name", "Kai Rannenberg" | first %}
+{% assign organizer_michael = site.data.organizers | where: "name", "Michael Friedewald" | first %}
+{% assign organizer_meiko = site.data.organizers | where: "name", "Meiko Jensen" | first %}
 
 {% capture speaker_wojciech_link %}<a href="{{ speaker_wojciech.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_wojciech.name }}</a>{% endcapture %}
 {% capture speaker_luca_link %}<a href="{{ speaker_luca.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_luca.name }}</a>{% endcapture %}
@@ -36,6 +41,11 @@ title: Programme
 {% capture speaker_teresa_link %}<a href="{{ speaker_teresa.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_teresa.name }}</a>{% endcapture %}
 {% capture speaker_andreea_link %}<a href="{{ speaker_andreea.webpage }}" target="_blank" rel="noopener noreferrer">{{ speaker_andreea.name }}</a>{% endcapture %}
 {% capture organizer_frank_link %}<a href="{{ organizer_frank.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_frank.name }}</a>{% endcapture %}
+{% capture organizer_nicola_link %}<a href="{{ organizer_nicola.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_nicola.name }}</a>{% endcapture %}
+{% capture organizer_narges_link %}<a href="{{ organizer_narges.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_narges.name }}</a>{% endcapture %}
+{% capture organizer_kai_link %}<a href="{{ organizer_kai.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_kai.name }}</a>{% endcapture %}
+{% capture organizer_michael_link %}<a href="{{ organizer_michael.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_michael.name }}</a>{% endcapture %}
+{% capture organizer_meiko_link %}<a href="{{ organizer_meiko.webpage }}" target="_blank" rel="noopener noreferrer">{{ organizer_meiko.name }}</a>{% endcapture %}
 <style>
     .container > main {
         min-width: 0;
@@ -98,7 +108,7 @@ title: Programme
 
     table.agenda {
         width: 100%;
-        min-width: 760px;
+        min-width: 820px;
         border-collapse: collapse;
         margin-top: 0;
         background: var(--white);
@@ -114,6 +124,12 @@ title: Programme
         text-align: left;
     }
 
+    table.agenda th:first-child,
+    table.agenda th:nth-child(2),
+    table.agenda th:last-child {
+        text-align: center;
+    }
+
     .agenda-time {
         width: 13%;
     }
@@ -122,12 +138,12 @@ title: Programme
         width: 19%;
     }
 
-    .agenda-title {
-        width: 43%;
+    .agenda-details {
+        width: 50%;
     }
 
-    .agenda-speakers {
-        width: 25%;
+    .agenda-chair {
+        width: 18%;
     }
 
     table.agenda td {
@@ -136,11 +152,15 @@ title: Programme
         vertical-align: top;
     }
 
-    table.agenda tbody tr:last-child td {
+    table.agenda tbody:last-of-type tr:last-child td {
         border-bottom: none;
     }
 
     table.agenda tr:hover {
+        background-color: #f7fafc;
+    }
+
+    table.agenda tbody.agenda-session-group:hover td {
         background-color: #f7fafc;
     }
 
@@ -155,9 +175,34 @@ title: Programme
         color: var(--baltic-blue);
     }
 
-    .title-col,
-    .speaker-col {
+    table.agenda td.time-col,
+    table.agenda td.slot-col {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .details-col,
+    .chair-col {
         overflow-wrap: anywhere;
+    }
+
+    table.agenda td.chair-col {
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .paper-duration {
+        display: inline-block;
+        margin-left: 0.35rem;
+        color: var(--intense-cherry);
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .paper-duration-short {
+        color: var(--intense-cherry);
+        font-weight: 700;
     }
 
     .session-break {
@@ -178,14 +223,6 @@ title: Programme
     .session-detail {
         display: block;
         margin-top: 6px;
-    }
-
-    .speaker-col > .session-detail:first-child {
-        margin-top: 0;
-    }
-
-    .session-detail + .session-speakers {
-        margin-top: 4px;
     }
 
     @media (max-width: 700px) {
@@ -223,94 +260,121 @@ title: Programme
                     <colgroup>
                         <col class="agenda-time">
                         <col class="agenda-slot">
-                        <col class="agenda-title">
-                        <col class="agenda-speakers">
+                        <col class="agenda-details">
+                        <col class="agenda-chair">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>Time</th>
                             <th>Slot Type</th>
-                            <th>Title</th>
-                            <th>Speaker(s)</th>
+                            <th>Speaker(s) / Title</th>
+                            <th>Chair / Moderator</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="time-col">08:00-09:00</td>
                             <td class="slot-col session-break">Registration - Welcome Coffee</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="time-col">09:00-10:00</td>
                             <td class="slot-col">Opening Remarks and Keynote</td>
-                            <td class="title-col">APF 2026: Ten Years of the GDPR - Engineering the Future</td>
-                            <td class="speaker-col">
-                                <span class="session-detail"><strong>Moderator:</strong> {{ organizer_frank_link }}</span>
+                            <td class="details-col">
                                 <ul class="session-speakers">
-                                    <li>{{ speaker_wojciech_link }}</li>
-                                    <li>{{ speaker_luca_link }}</li>
+                                    <li><strong>{{ speaker_wojciech_link }}</strong></li>
+                                    <li><strong>{{ speaker_luca_link }}</strong></li>
                                 </ul>
+                                <span class="session-detail">APF 2026: Ten Years of the GDPR - Engineering the Future</span>
                             </td>
+                            <td class="chair-col">{{ organizer_frank_link }}</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
+                        <tr>
+                            <td class="time-col" rowspan="2">10:00-11:00</td>
+                            <td class="slot-col" rowspan="2">Paper Session I</td>
+                            <td class="details-col"><strong>Tanel Mällo, Ainika Harro and Liina Kamm</strong><span class="session-detail">Transparency and Intervenability in Privacy Engineering: From Research Gap to GDPR Challenge <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="chair-col" rowspan="2">Nils Gruschka</td>
                         </tr>
                         <tr>
-                            <td class="time-col">10:00-11:00</td>
-                            <td class="slot-col">Paper Session I</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col"><strong>Giuseppe D'Acquisto and Fabio Ricciato</strong><span class="session-detail">Relativizing the Notion of Personal Data: A Proposed Framework for Data Sharing <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
+                    </tbody>
+                    <tbody>
                         <tr>
                             <td class="time-col">11:00-11:30</td>
                             <td class="slot-col session-break">Coffee Break</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="time-col">11:30-12:30</td>
                             <td class="slot-col">Keynote</td>
-                            <td class="title-col">tbc</td>
-                            <td>{{ speaker_helmut_link }}</td>
+                            <td class="details-col"><strong>{{ speaker_helmut_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="chair-col">{{ organizer_michael_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">12:30-13:30</td>
                             <td class="slot-col session-break">Lunch Break</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="time-col">13:30-14:15</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="title-col">Roles and competences of data protection authorities under the AI Act</td>
-                            <td>{{ speaker_matthias_link }}</td>
+                            <td class="details-col"><strong>{{ speaker_matthias_link }}</strong><span class="session-detail">Roles and competences of data protection authorities under the AI Act</span></td>
+                            <td class="chair-col">{{ organizer_nicola_link }}</td>
+                        </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
+                        <tr>
+                            <td class="time-col" rowspan="3">14:15-15:45</td>
+                            <td class="slot-col" rowspan="3">Paper Session II</td>
+                            <td class="details-col"><strong>Vanessa Fiedler and Zoltán Mann</strong><span class="session-detail">Secure and Explainable Inference with Neural Networks <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="chair-col" rowspan="3">Stefan Schiffner</td>
                         </tr>
                         <tr>
-                            <td class="time-col">14:15-15:45</td>
-                            <td class="slot-col">Paper Session II</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col"><strong>Kristina Magnussen and Rainer Böhme</strong><span class="session-detail">Personal Data Accuracy Is a Blind Spot in LLM Privacy Research <span class="paper-duration">Opinion paper (30 min)</span></span></td>
                         </tr>
+                        <tr>
+                            <td class="details-col"><strong>Niklas Zapatka, Moritz Kirschte, Sebastian Meiser, Bud P. Bruegger, Harald Zwingelberg and Esfandiar Mohammadi</strong><span class="session-detail">Understanding Differential Privacy in Terms of Crowd Size Preservation <span class="paper-duration">(30 min)</span></span></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
                         <tr>
                             <td class="time-col">15:45-16:15</td>
                             <td class="slot-col session-break">Coffee Break</td>
-                            <td class="title-col"></td>
                             <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
+                        <tr>
+                            <td class="time-col" rowspan="3">16:00-17:20</td>
+                            <td class="slot-col" rowspan="3">Paper Session III</td>
+                            <td class="details-col"><strong>David Martínez, Eusebi Calle and Dolors Canals Ametller</strong><span class="session-detail">The Web Tracking Score: A GDPR-Aligned Metric to Benchmark Privacy and Data Protection <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="chair-col" rowspan="3">Ina Schiering</td>
                         </tr>
                         <tr>
-                            <td class="time-col">16:00-17:20</td>
-                            <td class="slot-col">Paper Session III</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col"><strong>Sascha Löbner, Eleftherios Eleftheriadis, Jens Lindemann, Hannes Federrath and {{ organizer_kai_link }}</strong><span class="session-detail">Designing Privacy-Preserving Smart Home Intrusion Detection Through User Acceptance Criteria: An Action Design Research Study <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
+                        <tr>
+                            <td class="details-col"><strong>Henrik Graßhoff, Malte Hansen, {{ organizer_meiko_link }} and Sara Ramezanian</strong><span class="session-detail">Models in the Dark: Rectification and Erasure under GDPR in ML Supply Chains <span class="paper-duration paper-duration-short">Short paper (20 min)</span></span></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
                         <tr>
                             <td class="time-col">17:20-18:00</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="title-col">Security by Design and the GDPR - pretty much best friends?</td>
-                            <td>{{ speaker_marit_link }}</td>
+                            <td class="details-col"><strong>{{ speaker_marit_link }}</strong><span class="session-detail">Security by Design and the GDPR - pretty much best friends?</span></td>
+                            <td class="chair-col">{{ organizer_kai_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">18:00</td>
                             <td class="slot-col session-break">Social Event</td>
-                            <td class="title-col">Guided tour and APF conference dinner</td>
+                            <td class="details-col">Guided tour and APF conference dinner</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -326,104 +390,116 @@ title: Programme
                     <colgroup>
                         <col class="agenda-time">
                         <col class="agenda-slot">
-                        <col class="agenda-title">
-                        <col class="agenda-speakers">
+                        <col class="agenda-details">
+                        <col class="agenda-chair">
                     </colgroup>
                     <thead>
                         <tr>
                             <th>Time</th>
                             <th>Slot Type</th>
-                            <th>Title</th>
-                            <th>Speaker(s)</th>
+                            <th>Speaker(s) / Title</th>
+                            <th>Chair / Moderator</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="time-col">08:30-09:00</td>
                             <td class="slot-col session-break">Welcome Coffee</td>
-                            <td class="title-col"></td>
                             <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
+                        <tr>
+                            <td class="time-col" rowspan="2">09:00-10:00</td>
+                            <td class="slot-col" rowspan="2">Paper Session IV</td>
+                            <td class="details-col"><strong>Markus Sullivan</strong><span class="session-detail">Enforcement, Market Distortion, and the Danger of Reforming Fundamental Rights Under Pressure <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="chair-col" rowspan="2">Massimo Attoresi</td>
                         </tr>
                         <tr>
-                            <td class="time-col">09:00-10:00</td>
-                            <td class="slot-col">Paper Session IV</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col"><strong>Yana Dimova, Vincent Toubiana, Tom Van Goethem, Lieven Desmet and Wouter Joosen</strong><span class="session-detail">A History of GDPR Cookie Banner Compliance: The Roles of Publishers, Regulators and CMPs <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
+                    </tbody>
+                    <tbody>
                         <tr>
                             <td class="time-col">10:00-11:00</td>
                             <td class="slot-col">Keynote</td>
-                            <td class="title-col">tbc</td>
-                            <td>{{ speaker_max_link }}</td>
+                            <td class="details-col"><strong>{{ speaker_max_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="chair-col">{{ speaker_marit_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">11:00-11:30</td>
                             <td class="slot-col session-break">Coffee Break</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="time-col">11:30-12:30</td>
                             <td class="slot-col">Panel</td>
-                            <td class="title-col">Facilitating breach and incident reporting</td>
-                            <td class="speaker-col">
-                                <span class="session-detail"><strong>Moderator:</strong> {{ speaker_prokopios_link }}</span>
+                            <td class="details-col">
                                 <ul class="session-speakers">
-                                    <li>{{ speaker_jelena_link }}</li>
-                                    <li>{{ speaker_katarzyna_link }}</li>
-                                    <li>{{ speaker_dina_link }}</li>
-                                    <li>{{ speaker_andreea_link }}</li>
+                                    <li><strong>{{ speaker_jelena_link }}</strong></li>
+                                    <li><strong>{{ speaker_katarzyna_link }}</strong></li>
+                                    <li><strong>{{ speaker_dina_link }}</strong></li>
+                                    <li><strong>{{ speaker_andreea_link }}</strong></li>
                                 </ul>
+                                <span class="session-detail">Facilitating breach and incident reporting</span>
                             </td>
+                            <td class="chair-col">{{ speaker_prokopios_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">12:30-13:30</td>
                             <td class="slot-col session-break">Lunch Break</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
                         <tr>
                             <td class="time-col" rowspan="2">13:30-14:30</td>
                             <td class="slot-col" rowspan="2">Invited Talks</td>
-                            <td class="title-col">
-                                Secure Processing Environments: Joint report from the Hellenic and Spanish Data Protection Authorities
+                            <td class="details-col">
+                                <strong>{{ speaker_konstantinos_link }}, {{ speaker_teresa_link }}</strong>
+                                <span class="session-detail">Secure Processing Environments: Joint report from the Hellenic and Spanish Data Protection Authorities</span>
                             </td>
-                            <td class="speaker-col">
-                                <span class="session-detail"> {{ speaker_konstantinos_link }}</span>
-                                <span class="session-detail">{{ speaker_teresa_link }}</span>
-                            </td>
+                            <td class="chair-col" rowspan="2">{{ organizer_narges_link }}</td>
                         </tr>
                         <tr>
-                            <td class="title-col">
-                                ISO/IEC JTC 1/SC 44 Consumer protection in the field of privacy by design
+                            <td class="details-col">
+                                <strong>{{ speaker_jan_link }}</strong>
+                                <span class="session-detail">ISO/IEC JTC 1/SC 44 Consumer protection in the field of privacy by design</span>
                             </td>
-                            <td class="speaker-col">
-                                {{ speaker_jan_link }}
-                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="agenda-session-group">
+                        <tr>
+                            <td class="time-col" rowspan="2">14:30-15:30</td>
+                            <td class="slot-col" rowspan="2">Paper Session V</td>
+                            <td class="details-col"><strong>Soheil Human</strong><span class="session-detail">A Rights-First Path to Privacy by Architecture: Proposed Article 88b GDPR and the Case for Advanced Data Protection Control (ADPC) <span class="paper-duration">Opinion paper (30 min)</span></span></td>
+                            <td class="chair-col" rowspan="2">Malte Hansen</td>
                         </tr>
                         <tr>
-                            <td class="time-col">14:30-15:30</td>
-                            <td class="slot-col">Paper Session V</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col"><strong>Ramona Adair, Harald Zwingelberg, {{ organizer_michael_link }} and Ina Schiering</strong><span class="session-detail">Informed Consent by Design: Developer-Oriented Privacy Best Practices for GDPR Compliant mHealth Applications <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
+                    </tbody>
+                    <tbody>
                         <tr>
                             <td class="time-col">15:30-16:00</td>
                             <td class="slot-col session-break">Coffee Break</td>
-                            <td class="title-col"></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td class="time-col">16:00-16:30</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="title-col">tbc</td>
-                            <td>{{ speaker_irene_link }}</td>
+                            <td class="details-col"><strong>{{ speaker_irene_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="chair-col">{{ organizer_meiko_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">16:30-17:00</td>
                             <td class="slot-col session-break">Closing Remarks</td>
-                            <td class="title-col"></td>
-                            <td></td>
+                            <td class="details-col">Closing Session. Announcing 2027; Best Paper Award</td>
+                            <td class="chair-col">{{ organizer_frank_link }}</td>
                         </tr>
                     </tbody>
                 </table>
