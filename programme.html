@@ -187,9 +187,13 @@ title: Programme
     }
 
     table.agenda td.chair-col {
-        font-weight: 600;
+        font-weight: 400;
         text-align: center;
         vertical-align: middle;
+    }
+
+    table.agenda td.chair-col a {
+        font-weight: 400;
     }
 
     .paper-duration {
@@ -223,6 +227,10 @@ title: Programme
     .session-detail {
         display: block;
         margin-top: 6px;
+    }
+
+    .paper-authors {
+        font-weight: 400;
     }
 
     @media (max-width: 700px) {
@@ -283,8 +291,8 @@ title: Programme
                             <td class="slot-col">Opening Remarks and Keynote</td>
                             <td class="details-col">
                                 <ul class="session-speakers">
-                                    <li><strong>{{ speaker_wojciech_link }}</strong></li>
-                                    <li><strong>{{ speaker_luca_link }}</strong></li>
+                                    <li>{{ speaker_wojciech_link }}</li>
+                                    <li>{{ speaker_luca_link }}</li>
                                 </ul>
                                 <span class="session-detail">APF 2026: Ten Years of the GDPR - Engineering the Future</span>
                             </td>
@@ -295,11 +303,11 @@ title: Programme
                         <tr>
                             <td class="time-col" rowspan="2">10:00-11:00</td>
                             <td class="slot-col" rowspan="2">Paper Session I</td>
-                            <td class="details-col"><strong>Tanel Mällo, Ainika Harro and Liina Kamm</strong><span class="session-detail">Transparency and Intervenability in Privacy Engineering: From Research Gap to GDPR Challenge <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Tanel Mällo, Ainika Harro and Liina Kamm</span><span class="session-detail">Transparency and Intervenability in Privacy Engineering: From Research Gap to GDPR Challenge <span class="paper-duration">(30 min)</span></span></td>
                             <td class="chair-col" rowspan="2">Nils Gruschka</td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Giuseppe D'Acquisto and Fabio Ricciato</strong><span class="session-detail">Relativizing the Notion of Personal Data: A Proposed Framework for Data Sharing <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Giuseppe D'Acquisto and Fabio Ricciato</span><span class="session-detail">Relativizing the Notion of Personal Data: A Proposed Framework for Data Sharing <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
                     </tbody>
                     <tbody>
@@ -312,7 +320,7 @@ title: Programme
                         <tr>
                             <td class="time-col">11:30-12:30</td>
                             <td class="slot-col">Keynote</td>
-                            <td class="details-col"><strong>{{ speaker_helmut_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="details-col">{{ speaker_helmut_link }}<span class="session-detail">tbc</span></td>
                             <td class="chair-col">{{ organizer_michael_link }}</td>
                         </tr>
                         <tr>
@@ -324,7 +332,7 @@ title: Programme
                         <tr>
                             <td class="time-col">13:30-14:15</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="details-col"><strong>{{ speaker_matthias_link }}</strong><span class="session-detail">Roles and competences of data protection authorities under the AI Act</span></td>
+                            <td class="details-col">{{ speaker_matthias_link }}<span class="session-detail">Roles and competences of data protection authorities under the AI Act</span></td>
                             <td class="chair-col">{{ organizer_nicola_link }}</td>
                         </tr>
                     </tbody>
@@ -332,14 +340,14 @@ title: Programme
                         <tr>
                             <td class="time-col" rowspan="3">14:15-15:45</td>
                             <td class="slot-col" rowspan="3">Paper Session II</td>
-                            <td class="details-col"><strong>Vanessa Fiedler and Zoltán Mann</strong><span class="session-detail">Secure and Explainable Inference with Neural Networks <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Vanessa Fiedler and Zoltán Mann</span><span class="session-detail">Secure and Explainable Inference with Neural Networks <span class="paper-duration">(30 min)</span></span></td>
                             <td class="chair-col" rowspan="3">Stefan Schiffner</td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Kristina Magnussen and Rainer Böhme</strong><span class="session-detail">Personal Data Accuracy Is a Blind Spot in LLM Privacy Research <span class="paper-duration">Opinion paper (30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Kristina Magnussen and Rainer Böhme</span><span class="session-detail">Personal Data Accuracy Is a Blind Spot in LLM Privacy Research <span class="paper-duration">Opinion paper (30 min)</span></span></td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Niklas Zapatka, Moritz Kirschte, Sebastian Meiser, Bud P. Bruegger, Harald Zwingelberg and Esfandiar Mohammadi</strong><span class="session-detail">Understanding Differential Privacy in Terms of Crowd Size Preservation <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Niklas Zapatka, Moritz Kirschte, Sebastian Meiser, Bud P. Bruegger, Harald Zwingelberg and Esfandiar Mohammadi</span><span class="session-detail">Understanding Differential Privacy in Terms of Crowd Size Preservation <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
                     </tbody>
                     <tbody>
@@ -354,27 +362,27 @@ title: Programme
                         <tr>
                             <td class="time-col" rowspan="3">16:10-17:30</td>
                             <td class="slot-col" rowspan="3">Paper Session III</td>
-                            <td class="details-col"><strong>David Martínez, Eusebi Calle and Dolors Canals Ametller</strong><span class="session-detail">The Web Tracking Score: A GDPR-Aligned Metric to Benchmark Privacy and Data Protection <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">David Martínez, Eusebi Calle and Dolors Canals Ametller</span><span class="session-detail">The Web Tracking Score: A GDPR-Aligned Metric to Benchmark Privacy and Data Protection <span class="paper-duration">(30 min)</span></span></td>
                             <td class="chair-col" rowspan="3">Ina Schiering</td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Sascha Löbner, Eleftherios Eleftheriadis, Jens Lindemann, Hannes Federrath and {{ organizer_kai_link }}</strong><span class="session-detail">Designing Privacy-Preserving Smart Home Intrusion Detection Through User Acceptance Criteria: An Action Design Research Study <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Sascha Löbner, Eleftherios Eleftheriadis, Jens Lindemann, Hannes Federrath and Kai Rannenberg</span><span class="session-detail">Designing Privacy-Preserving Smart Home Intrusion Detection Through User Acceptance Criteria: An Action Design Research Study <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Henrik Graßhoff, Malte Hansen, {{ organizer_meiko_link }} and Sara Ramezanian</strong><span class="session-detail">Models in the Dark: Rectification and Erasure under GDPR in ML Supply Chains <span class="paper-duration paper-duration-short">Short paper (20 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Henrik Graßhoff, Malte Hansen, Meiko Jensen and Sara Ramezanian</span><span class="session-detail">Models in the Dark: Rectification and Erasure under GDPR in ML Supply Chains <span class="paper-duration paper-duration-short">Short paper (20 min)</span></span></td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td class="time-col">17:30-18:15</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="details-col"><strong>{{ speaker_marit_link }}</strong><span class="session-detail">Security by Design and the GDPR - pretty much best friends?</span></td>
+                            <td class="details-col">{{ speaker_marit_link }}<span class="session-detail">Security by Design and the GDPR - pretty much best friends?</span></td>
                             <td class="chair-col">{{ organizer_kai_link }}</td>
                         </tr>
                         <tr>
                             <td class="time-col">18:15</td>
                             <td class="slot-col session-break">Social Event</td>
-                            <td class="details-col">Guided tour and APF conference dinner</td>
+                            <td class="details-col">Guided city tour and DuckDuckGo-sponsored conference dinner</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -413,18 +421,18 @@ title: Programme
                         <tr>
                             <td class="time-col" rowspan="2">09:00-10:00</td>
                             <td class="slot-col" rowspan="2">Paper Session IV</td>
-                            <td class="details-col"><strong>Markus Sullivan</strong><span class="session-detail">Enforcement, Market Distortion, and the Danger of Reforming Fundamental Rights Under Pressure <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Markus Sullivan</span><span class="session-detail">Enforcement, Market Distortion, and the Danger of Reforming Fundamental Rights Under Pressure <span class="paper-duration">(30 min)</span></span></td>
                             <td class="chair-col" rowspan="2">Massimo Attoresi</td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Yana Dimova, Vincent Toubiana, Tom Van Goethem, Lieven Desmet and Wouter Joosen</strong><span class="session-detail">A History of GDPR Cookie Banner Compliance: The Roles of Publishers, Regulators and CMPs <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Yana Dimova, Vincent Toubiana, Tom Van Goethem, Lieven Desmet and Wouter Joosen</span><span class="session-detail">A History of GDPR Cookie Banner Compliance: The Roles of Publishers, Regulators and CMPs <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
                     </tbody>
                     <tbody>
                         <tr>
                             <td class="time-col">10:00-11:00</td>
                             <td class="slot-col">Keynote</td>
-                            <td class="details-col"><strong>{{ speaker_max_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="details-col">{{ speaker_max_link }}<span class="session-detail">tbc</span></td>
                             <td class="chair-col">{{ speaker_marit_link }}</td>
                         </tr>
                         <tr>
@@ -438,10 +446,10 @@ title: Programme
                             <td class="slot-col">Panel</td>
                             <td class="details-col">
                                 <ul class="session-speakers">
-                                    <li><strong>{{ speaker_jelena_link }}</strong></li>
-                                    <li><strong>{{ speaker_katarzyna_link }}</strong></li>
-                                    <li><strong>{{ speaker_dina_link }}</strong></li>
-                                    <li><strong>{{ speaker_andreea_link }}</strong></li>
+                                    <li>{{ speaker_jelena_link }}</li>
+                                    <li>{{ speaker_katarzyna_link }}</li>
+                                    <li>{{ speaker_dina_link }}</li>
+                                    <li>{{ speaker_andreea_link }}</li>
                                 </ul>
                                 <span class="session-detail">Facilitating breach and incident reporting</span>
                             </td>
@@ -459,14 +467,14 @@ title: Programme
                             <td class="time-col" rowspan="2">13:30-14:30</td>
                             <td class="slot-col" rowspan="2">Invited Talks</td>
                             <td class="details-col">
-                                <strong>{{ speaker_konstantinos_link }}, {{ speaker_teresa_link }}</strong>
+                                {{ speaker_konstantinos_link }}, {{ speaker_teresa_link }}
                                 <span class="session-detail">Secure Processing Environments: Joint report from the Hellenic and Spanish Data Protection Authorities</span>
                             </td>
                             <td class="chair-col" rowspan="2">{{ organizer_narges_link }}</td>
                         </tr>
                         <tr>
                             <td class="details-col">
-                                <strong>{{ speaker_jan_link }}</strong>
+                                {{ speaker_jan_link }}
                                 <span class="session-detail">ISO/IEC JTC 1/SC 44 Consumer protection in the field of privacy by design</span>
                             </td>
                         </tr>
@@ -475,11 +483,11 @@ title: Programme
                         <tr>
                             <td class="time-col" rowspan="2">14:30-15:30</td>
                             <td class="slot-col" rowspan="2">Paper Session V</td>
-                            <td class="details-col"><strong>Soheil Human</strong><span class="session-detail">A Rights-First Path to Privacy by Architecture: Proposed Article 88b GDPR and the Case for Advanced Data Protection Control (ADPC) <span class="paper-duration">Opinion paper (30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Soheil Human</span><span class="session-detail">A Rights-First Path to Privacy by Architecture: Proposed Article 88b GDPR and the Case for Advanced Data Protection Control (ADPC) <span class="paper-duration">Opinion paper (30 min)</span></span></td>
                             <td class="chair-col" rowspan="2">Malte Hansen</td>
                         </tr>
                         <tr>
-                            <td class="details-col"><strong>Ramona Adair, Harald Zwingelberg, {{ organizer_michael_link }} and Ina Schiering</strong><span class="session-detail">Informed Consent by Design: Developer-Oriented Privacy Best Practices for GDPR Compliant mHealth Applications <span class="paper-duration">(30 min)</span></span></td>
+                            <td class="details-col"><span class="paper-authors">Ramona Adair, Harald Zwingelberg, Michael Friedewald and Ina Schiering</span><span class="session-detail">Informed Consent by Design: Developer-Oriented Privacy Best Practices for GDPR Compliant mHealth Applications <span class="paper-duration">(30 min)</span></span></td>
                         </tr>
                     </tbody>
                     <tbody>
@@ -492,7 +500,7 @@ title: Programme
                         <tr>
                             <td class="time-col">16:00-16:30</td>
                             <td class="slot-col">Invited Talk</td>
-                            <td class="details-col"><strong>{{ speaker_irene_link }}</strong><span class="session-detail">tbc</span></td>
+                            <td class="details-col">{{ speaker_irene_link }}<span class="session-detail">tbc</span></td>
                             <td class="chair-col">{{ organizer_meiko_link }}</td>
                         </tr>
                         <tr>
@@ -510,8 +518,8 @@ title: Programme
             <h3>Social Programme</h3>
             <p>In addition to the technical program, APF 2026 also comprises agenda items dedicated to celebrating Salzburg’s rich and world-renowned cultural heritage, socializing, and networking in mind-stimulating environments:</p>
             <ul>
-                <li><span class="deadline">08.09.</span> Opening Event: Classical Concert (see above)</li>
-                <li><span class="deadline">09.09.</span> Social Event: 6:15PM guided tour through the city center to the conference dinner location, followed by the 7PM APF conference dinner sponsored by DuckDuckGo. Location: <a href="https://imlauer.com/pitterkeller/?lang=en" target="_blank" rel="noopener noreferrer">PitterKeller</a>, Rainerstraße 6, Salzburg.</li>
+                <li><span class="deadline">08.09.</span> Opening Event: 6PM Classical Concert (see above)</li>
+                <li><span class="deadline">09.09.</span> Social Event: 6:15PM guided tour (sponsored by Salzburg Convention Bureau) through the city center to the conference dinner location, followed by the DuckDuckGo-sponsored APF conference dinner at 7:15PM in the <a href="https://imlauer.com/pitterkeller/?lang=en" target="_blank" rel="noopener noreferrer">PitterKeller</a>, Rainerstraße 6, Salzburg.</li>
             </ul>
         </section>
         </main>
