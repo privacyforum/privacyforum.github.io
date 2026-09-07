@@ -383,6 +383,16 @@ nav ul li ul li a:hover {
     font-size: 0.92rem;
 }
 
+.proceedings-link {
+    display: block;
+}
+
+.sidebar-box img.proceedings-cover {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 0;
+}
+
 .organizers-box img {
     max-width: 100%;
 }
